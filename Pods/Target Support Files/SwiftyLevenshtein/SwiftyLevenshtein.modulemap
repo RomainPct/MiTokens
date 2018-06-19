@@ -1,0 +1,6 @@
+framework module SwiftyLevenshtein {
+  umbrella header "SwiftyLevenshtein-umbrella.h"
+
+  export *
+  module * { export * }
+}
