@@ -12,15 +12,17 @@ import SwiftyLevenshtein
 class AirdropsDatabase {
     
 //    Variables
-    internal var _realm:Realm?
+    internal let _realm:Realm?
     private var _airdrops_list:[Airdrop] = []
     private var _filtered_list:FilteredList = FilteredList(wWaiting: true, wReceived: true, wSold: true, wSearchTherm: nil, list: [])
     private var tokenList:[String:[Airdrop]] = [:]
     
     init() {
-        if let url = Realm.Configuration.defaultConfiguration.fileURL?.deletingLastPathComponent().appendingPathComponent("airdrops.realm") {
-            do { _realm = try Realm(fileURL: url) } catch { print("ERROR : \(error)") }
-        } else {
+        let url = APIManager._URL_library.appendingPathComponent("airdrops.realm")
+        do {
+            _realm = try Realm(fileURL: url)
+        } catch {
+            print("ERROR : \(error)")
             _realm = nil
         }
         getWalletsFromDB()

@@ -489,14 +489,14 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chargement en cours ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51v-xY-gDz" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                        <rect key="frame" x="13" y="64.999999999999972" width="184" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51v-xY-gDz" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="64.999999999999972" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" estimatedRowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZzM-YB-g3u">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="510"/>
+                                        <rect key="frame" x="0.0" y="67" width="375" height="531"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <prototypes>
@@ -1320,7 +1320,7 @@ Adresse du smart contract :
                                                 <rect key="frame" x="21" y="393.33333333333337" width="315" height="0.0"/>
                                                 <subviews>
                                                     <view hidden="YES" opaque="NO" clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXW-yQ-b4d" customClass="GreyView" customModule="MiTokens" customModuleProvider="target">
-                                                        <rect key="frame" x="-43" y="-582.33333333333337" width="0.0" height="34"/>
+                                                        <rect key="frame" x="-35" y="-582.33333333333337" width="0.0" height="34"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ag0-eW-veq" customClass="ColorIndicator_view" customModule="MiTokens" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="8" height="34"/>
@@ -1349,7 +1349,7 @@ Adresse du smart contract :
                                                         </constraints>
                                                     </view>
                                                     <view hidden="YES" opaque="NO" clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBp-2G-j0l" customClass="GreyView" customModule="MiTokens" customModuleProvider="target">
-                                                        <rect key="frame" x="-43" y="-582.33333333333337" width="0.0" height="34"/>
+                                                        <rect key="frame" x="-35" y="-582.33333333333337" width="0.0" height="34"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fNX-Dv-y8f" customClass="ColorIndicator_view" customModule="MiTokens" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="8" height="34"/>
@@ -1949,9 +1949,6 @@ Valeur totale estimée : 217€</string>
         </namedColor>
         <namedColor name="Green">
             <color red="0.13699999451637268" green="0.9100000262260437" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Orange">
-            <color red="1" green="0.54100000858306885" blue="0.097999997437000275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Orange">
             <color red="1" green="0.54100000858306885" blue="0.097999997437000275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

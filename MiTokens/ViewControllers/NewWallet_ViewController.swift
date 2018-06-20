@@ -80,10 +80,10 @@ class NewWallet_ViewController: UIViewController, UITextFieldDelegate {
             // Vérifier que ce wallet n'est pas déja enregistré dans l'app
             if Singletons.WalletsDB.verifIfWalletAddressIsNotAlreadyRegister(publicKey) {
                 // Informer l'utilisateur
-                ui_AddWalletFormButton.titleLabel?.text = "Ajout en cours ..."
+                ui_AddWalletFormButton.setTitle("Ajout en cours ...", for: .normal)
                 // Vérifier l'existence du wallet
                 Singletons.API.getTokensOnAccount(withPublicKey: publicKey) { (jsonResponse) in
-                    self.ui_AddWalletFormButton.titleLabel?.text = "Ajouter ce wallet"
+                    self.ui_AddWalletFormButton.setTitle("Ajouter ce wallet", for: .normal)
                     if jsonResponse != nil {
                         // Ajouter le compte à la base de données
                         let newWallet = Wallet(dataFromEthphlorer: jsonResponse!, withName: name)

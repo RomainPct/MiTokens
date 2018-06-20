@@ -17,7 +17,6 @@ class Wallets_ViewController: UIViewController, UICollectionViewDataSource, UITa
     @IBOutlet weak var ui_tokensTableView: UITableView!
     @IBOutlet weak var ui_numberOfTokensLabel: Body_label!
     
-    
     var homeWillNeedReload:Bool = false
     private var lastSelectedToken:token?
     private var _focusedWallet:Wallet?
@@ -32,6 +31,21 @@ class Wallets_ViewController: UIViewController, UICollectionViewDataSource, UITa
         }
     }
     
+//    Pull to refresh
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.backgroundColor = #colorLiteral(red: 0.1369999945, green: 0.9100000262, blue: 0.3490000069, alpha: 1)
+        refreshControl.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        let attr:[NSAttributedStringKey : Any] = [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), NSAttributedStringKey.font: UIFont(name: "Raleway-Bold", size: 13)!]
+        refreshControl.attributedTitle = NSAttributedString(string: "Chargement en cours ...", attributes: attr)
+        refreshControl.addTarget(self, action: #selector(handleRefresh(_:)), for: UIControlEvents.valueChanged)
+        return refreshControl
+    }()
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl){
+        loadTokens(wFocusedWallet: focusedWalletIndex)
+    }
+    
+//    View did load
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -39,6 +53,7 @@ class Wallets_ViewController: UIViewController, UICollectionViewDataSource, UITa
         ui_tokensTableView.rowHeight = 60
         ui_tokensTableView.estimatedRowHeight = 60
         ui_tokensTableView.dataSource = self
+        ui_tokensTableView.refreshControl = refreshControl
         loadTokens()
         showTheGoodPart()
     }
@@ -154,15 +169,15 @@ class Wallets_ViewController: UIViewController, UICollectionViewDataSource, UITa
         guard Singletons.WalletsDB.wallets_list.count != 0 else {
             return
         }
+        if !refreshControl.isRefreshing {
+            refreshControl.beginRefreshing()
+        }
         focusedWalletIndex = position
         if let focusedWallet = _focusedWallet {
-            if focusedWallet.tokensList.count == 0 {
-                focusedWallet.updateBalances {
-                    self.ui_numberOfTokensLabel.text = "\(focusedWallet.tokensList.count) tokens"
-                    self.ui_tokensTableView.reloadData()
-                }
-            } else {
+            focusedWallet.updateBalances {
                 self.ui_numberOfTokensLabel.text = "\(focusedWallet.tokensList.count) tokens"
+                self.ui_tokensTableView.reloadData()
+                self.refreshControl.endRefreshing()
             }
         }
     }

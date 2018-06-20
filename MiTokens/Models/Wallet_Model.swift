@@ -16,7 +16,7 @@ class Wallet:Object {
     @objc private dynamic var _erc20Address:String?
     private var _tokensList:[token] = []
     lazy var notifManager = NotificationManager()
-    
+    var lastUpdate:Date?
     
     var name: String {
         return _name!
@@ -50,15 +50,21 @@ class Wallet:Object {
     }
     
     func updateBalances(handler:@escaping ()->Void) {
-        Singletons.API.getTokensOnAccount(withPublicKey: erc20Address) { (data) in
-            if data != nil {
-                self.setBalances(data: data!)
+        if lastUpdate == nil || !Date().timeIntervalSince(lastUpdate!).isLess(than: 60) {
+            Singletons.API.getTokensOnAccount(withPublicKey: erc20Address) { (data) in
+                if data != nil {
+                    self.setBalances(data: data!)
+                }
+                self.lastUpdate = Date()
+                handler()
             }
+        } else {
             handler()
         }
     }
     
     private func setBalances(data:JSON){
+        _tokensList = []
         _tokensList.append(token(name: "Ethereum", symbol: "ETH", smartContract: "ethereum", realBalance: data["ETH"]["balance"].doubleValue.asAmount(withMaxDigits: 12), decimals: 0))
         for tokenData in data["tokens"] {
             let balance = tokenData.1["balance"].stringValue

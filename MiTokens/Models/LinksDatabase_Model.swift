@@ -15,14 +15,11 @@ class LinksDatabase {
     
 //    Init
     init() {
-        if let url = Realm.Configuration.defaultConfiguration.fileURL?.deletingLastPathComponent().appendingPathComponent("links.realm") {
-            do {
-                _realm = try Realm(fileURL: url)
-            } catch {
-                print("ERROR : \(error)")
-                _realm = nil
-            }
-        } else {
+        let url = APIManager._URL_library.appendingPathComponent("links.realm")
+        do {
+            _realm = try Realm(fileURL: url)
+        } catch {
+            print("ERROR : \(error)")
             _realm = nil
         }
     }

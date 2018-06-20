@@ -10,14 +10,17 @@ import RealmSwift
 
 class WalletsDatabase {
     
-    internal var _realm:Realm?
+    internal let _realm:Realm?
     
     var wallets_list:[Wallet] = []
     var isTotalyLoad = false
     
     init() {
-        let url = Realm.Configuration.defaultConfiguration.fileURL?.deletingLastPathComponent().appendingPathComponent("wallets.realm")
-        do { _realm = try Realm(fileURL: url!) } catch { print("ERROR : \(error)") }
+        let url = APIManager._URL_library.appendingPathComponent("wallets.realm")
+        do { _realm = try Realm(fileURL: url) } catch {
+            print("ERROR : \(error)")
+            _realm = nil
+        }
         getWalletsFromDB()
     }
     private func getWalletsFromDB() {

@@ -15,7 +15,7 @@ class APIManager {
     private let _KEY_API_ethphlorer = "lmtk5156APeR61"
     private let _KEY_API_etherscan = "KMQXRHS3F2ZQK9A8MGXEJJZKMNWSP46NUE"
     
-    static let _PATH_library = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]
+    static let _URL_library = try! NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0].asURL()
     
     func getTokensOnAccount(withPublicKey publicKey:String,received:@escaping (JSON?)->Void) {
         let urlString = "https://api.ethplorer.io/getAddressInfo/\(publicKey)?apiKey=\(_KEY_API_ethphlorer)"
