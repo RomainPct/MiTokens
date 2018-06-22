@@ -175,7 +175,7 @@ class Wallets_ViewController: UIViewController, UICollectionViewDataSource, UITa
         focusedWalletIndex = position
         if let focusedWallet = _focusedWallet {
             focusedWallet.updateBalances {
-                self.ui_numberOfTokensLabel.text = "\(focusedWallet.tokensList.count) tokens"
+                self.ui_numberOfTokensLabel.text = "\(focusedWallet.tokensList.count - 1) tokens"
                 self.ui_tokensTableView.reloadData()
                 self.refreshControl.endRefreshing()
             }
