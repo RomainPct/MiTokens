@@ -49,8 +49,8 @@ class Wallet:Object {
         setBalances(data: data)
     }
     
-    func updateBalances(handler:@escaping ()->Void) {
-        if lastUpdate == nil || !Date().timeIntervalSince(lastUpdate!).isLess(than: 60) {
+    func updateBalances(forcing:Bool = false, handler:@escaping ()->Void) {
+        if lastUpdate == nil || !Date().timeIntervalSince(lastUpdate!).isLess(than: 60) || forcing {
             Singletons.API.getTokensOnAccount(withPublicKey: erc20Address) { (data) in
                 if data != nil {
                     self.setBalances(data: data!)

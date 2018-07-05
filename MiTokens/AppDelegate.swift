@@ -35,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 DispatchQueue.main.async {
                     application.registerForRemoteNotifications()
                 }
+            } else {
+                NotificationManager().notAuthorizedToSendNotifications()
             }
         }
         return true

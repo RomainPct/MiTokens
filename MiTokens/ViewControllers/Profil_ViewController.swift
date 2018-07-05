@@ -37,8 +37,11 @@ class Profil_ViewController: UIViewController, UIApplicationDelegate {
         """
     }
     fileprivate func setNotifications(){
-        print(notifManager.TokensReceivedNotification)
-        print(notifManager.TokenListedNotification)
+        print("Tokens received : \(notifManager.TokensReceivedNotification)")
+        print("Tokens listed : \(notifManager.TokenListedNotification)")
+        // Arreter les animations
+        ui_tokensReceivedNotification.stopChangingStateAnimation()
+        ui_tokensListedNotification.stopChangingStateAnimation()
         ui_tokensReceivedNotification.backgroundColor = notifManager.TokensReceivedNotification ? #colorLiteral(red: 0.1369999945, green: 0.9100000262, blue: 0.3490000069, alpha: 1) : #colorLiteral(red: 1, green: 0.5410000086, blue: 0.09799999744, alpha: 1)
         ui_tokensListedNotification.backgroundColor = notifManager.TokenListedNotification ? #colorLiteral(red: 0.1369999945, green: 0.9100000262, blue: 0.3490000069, alpha: 1) : #colorLiteral(red: 1, green: 0.5410000086, blue: 0.09799999744, alpha: 1)
     }
@@ -75,6 +78,7 @@ class Profil_ViewController: UIViewController, UIApplicationDelegate {
         }
     }
     @IBAction func tapOnTokensReceivedNotification(_ sender: Any) {
+        ui_tokensReceivedNotification.startChangingStateAnimation()
         verifNotificationAuth {
             self.setTokenReceivedNotification()
         }
@@ -93,14 +97,16 @@ class Profil_ViewController: UIViewController, UIApplicationDelegate {
             let alert = UIAlertController(title: "Recevoir de notifications lorsque vous recevez des tokens", message: "Souhaitez-vous être notifié lorsque vous recevez des tokens sur vos wallets ?", preferredStyle: .actionSheet)
             alert.addAction(cancelAction)
             alert.addAction(UIAlertAction(title: "Être notifié lorsque je reçois des tokens", style: .default, handler: { (_) in
-                self.notifManager.turnOnTokenReceivedNotification()
-                self.setNotifications()
+                self.notifManager.turnOnTokenReceivedNotification {
+                    self.setNotifications()
+                }
             }))
             present(alert, animated: true, completion: nil)
         }
     }
     
     @IBAction func tapOnTokenListedNotification(_ sender: Any) {
+        ui_tokensListedNotification.startChangingStateAnimation()
         verifNotificationAuth {
             self.setTokenListedNotification()
         }
@@ -111,16 +117,18 @@ class Profil_ViewController: UIViewController, UIApplicationDelegate {
             let alert = UIAlertController(title: "Ne plus recevoir de notifications lorsqu'un de mes tokens est listé", message: "Souhaitez-vous vraiment ne plus être alerter lorsque l'un de vos tokens est listé sur une plateforme d'échange ?", preferredStyle: .actionSheet)
             alert.addAction(cancelAction)
             alert.addAction(UIAlertAction(title: "Ne plus recevoir de notifs", style: .default, handler: { (_) in
-                self.notifManager.turnOffTokenListedNotification()
-                self.setNotifications()
+                self.notifManager.turnOffTokenListedNotification {
+                    self.setNotifications()
+                }
             }))
             present(alert, animated: true, completion: nil)
         } else {
             let alert = UIAlertController(title: "Recevoir de notifications lorsque l'un de mes tokens est listé", message: "Souhaitez-vous être alerter lorsque l'un de vos tokens est listé sur une plateforme d'échange ?", preferredStyle: .actionSheet)
             alert.addAction(cancelAction)
             alert.addAction(UIAlertAction(title: "Être notifié lorsque un token est listé", style: .default, handler: { (_) in
-                self.notifManager.turnOnTokenListedNotification()
-                self.setNotifications()
+                self.notifManager.turnOnTokenListedNotification {
+                    self.setNotifications()
+                }
             }))
             present(alert, animated: true, completion: nil)
         }

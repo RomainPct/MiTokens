@@ -80,7 +80,8 @@ class ValuesManager {
     // Rechercher l'id d'un token dans le listing
     fileprivate func getIdInCMCList(forLink link:Link) ->  String? {
         if let list = _coinMarketCapListing!.listing.arrayObject as? [Dictionary<String, Any>] {
-            let results = list.filter { $0["symbol"] as! String == link.tokenSymbol && link.tokenName.contains($0["name"] as! String) }
+//            let results = list.filter { $0["symbol"] as! String == link.tokenSymbol && link.tokenName.contains($0["name"] as! String) }
+            let results = list.filter { $0["symbol"] as! String == link.tokenSymbol }
             if let result = results.first,
                 let idInt = result["id"] as? Int {
                 // Enregistré la valeur dans la db
