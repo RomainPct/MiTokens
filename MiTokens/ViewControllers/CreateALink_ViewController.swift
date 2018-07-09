@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateALink_ViewController: UIViewController, UICollectionViewDataSource {
+class CreateALink_ViewController: TopBarAd_ViewController, UICollectionViewDataSource {
 
     var nextVCNeedReload:Bool = false
     var token:token?

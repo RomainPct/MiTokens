@@ -14,6 +14,24 @@ class ValuesManager {
 //    Variables
     internal let _realm:Realm?
     private var _coinMarketCapListing:Listing?
+    private var valuesList:[String:Value] = [:]
+    
+    var ETHPrice: Double {
+        return valuesList["ETH"]?.price  ?? 0
+    }
+    
+    func setETHPrice(handler:@escaping () -> Void) {
+        if valuesList["ETH"] != nil,
+            Date().timeIntervalSince(valuesList["ETH"]!.lastUpdate).isLess(than: 60) {
+            handler()
+        } else {
+            print("setETHPrice")
+            Singletons.API.getValueOnCMC(forCMCId: "1027") { (jsonData) in
+                self.valuesList["ETH"] = Value(source: .CoinMarketCap, jsonData: jsonData["data"]["quotes"]["EUR"])
+                handler()
+            }
+        }
+    }
     
 //    Init
     init() {
@@ -30,23 +48,38 @@ class ValuesManager {
     }
     
 //    Récupérer la valeur d'un token
-    func getValue(ofLink link:Link, handler:@escaping(JSON?) -> Void ) {
-        getCMCId(forLink: link) { (idResponse) in
-            if let id = idResponse {
-                Singletons.API.getValue(forCMCId: id, handler: { (responseJSON) in
-                    handler(responseJSON["data"]["quotes"]["EUR"])
-//                    REPONSE JSON ( responseJSON["data"]["quotes"]["EUR"] ) :
-//                    {
-//                        "percent_change_24h" : -9.5399999999999991,
-//                        "volume_24h" : 585414.35615690425,
-//                        "percent_change_1h" : -0.41999999999999998,
-//                        "percent_change_7d" : 1.01,
-//                        "market_cap" : 10400120,
-//                        "price" : 0.0278965688
-//                    }
-                })
+    func getValue(ofLink link:Link, handler:@escaping(Value?) -> Void ) {
+        setETHPrice {
+            // Vérifier si la valeur est déja enregistré et si elle est récente
+            if self.valuesList[link.tokenSymbol] != nil {
+                print(Date().timeIntervalSince(self.valuesList[link.tokenSymbol]!.lastUpdate).isLess(than: 60))
+            }
+            if self.valuesList[link.tokenSymbol] == nil ||
+                !Date().timeIntervalSince(self.valuesList[link.tokenSymbol]!.lastUpdate).isLess(than: 60) {
+                // Récupérer le l'id Coin Market Cap
+                self.getCMCId(forLink: link) { (idResponse) in
+                    // Si il existe, lire la valeur sur CMC
+                    if let id = idResponse {
+                        Singletons.API.getValueOnCMC(forCMCId: id, handler: { (responseJSON) in
+                            let val = Value(source: .CoinMarketCap, jsonData: responseJSON["data"]["quotes"]["EUR"])
+                            self.valuesList[link.tokenSymbol] = val
+                            handler(val)
+                        })
+                    } else {
+                        // Sinon chercher la valeur sur Idex
+                        Singletons.API.getValueOnIdex(forSymbol: link.tokenSymbol, handler: { (responseJSON) in
+                            if responseJSON.count != 0 {
+                                let val = Value(source: .Idex, jsonData: responseJSON)
+                                self.valuesList[link.tokenSymbol] = val
+                                handler(val)
+                            } else {
+                                handler(nil)
+                            }
+                        })
+                    }
+                }
             } else {
-                handler(nil)
+                handler(self.valuesList[link.tokenSymbol])
             }
         }
     }
@@ -70,7 +103,7 @@ class ValuesManager {
     
     // Rechercher l'id d'un token dans la DB
     fileprivate func searchCMCIdInDatabase(forSmartContract smartContract:String) -> String? {
-        if let value = _realm?.objects(Value.self).filter("_smartContract == '\(smartContract)'").first {
+        if let value = _realm?.objects(CMClinkForValue.self).filter("_smartContract == '\(smartContract)'").first {
             return value.coinMarketCapID
         } else {
             return nil
@@ -80,7 +113,6 @@ class ValuesManager {
     // Rechercher l'id d'un token dans le listing
     fileprivate func getIdInCMCList(forLink link:Link) ->  String? {
         if let list = _coinMarketCapListing!.listing.arrayObject as? [Dictionary<String, Any>] {
-//            let results = list.filter { $0["symbol"] as! String == link.tokenSymbol && link.tokenName.contains($0["name"] as! String) }
             let results = list.filter { $0["symbol"] as! String == link.tokenSymbol }
             if let result = results.first,
                 let idInt = result["id"] as? Int {
@@ -94,7 +126,7 @@ class ValuesManager {
     
     // Enregistrer un lien smartContract/Id CMC dans la db
     fileprivate func save(id:String, forSmartContract smartContract:String) {
-        let value = Value(forSmartContract: smartContract, linkToCMCId: id)
+        let value = CMClinkForValue(forSmartContract: smartContract, linkToCMCId: id)
         try? _realm?.write {
             _realm?.add(value)
         }

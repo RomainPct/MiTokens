@@ -98,7 +98,7 @@ class Wallets_ViewController: UIViewController, UICollectionViewDataSource, UITa
             sender.isAvalaible = true
             // Charger les tokens sur le wallet
             loadTokens(wFocusedWallet: position)
-            ui_tokensTableView.reloadData()
+//            ui_tokensTableView.reloadData()
         } else {
             performSegue(withIdentifier: "showAddWalletForm", sender: nil)
         }

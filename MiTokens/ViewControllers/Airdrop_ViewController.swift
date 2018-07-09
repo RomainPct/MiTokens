@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class Airdrop_ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelegate {
+class Airdrop_ViewController: TopBarAd_ViewController, UITextFieldDelegate {
 
 //    Var
     var airdrop:Airdrop?
@@ -53,9 +53,6 @@ class Airdrop_ViewController: UIViewController, UITextFieldDelegate, GADBannerVi
     @IBOutlet weak var ui_notReceivedButton: UIButton!
     @IBOutlet weak var cs_notReceivedButtonHeight: NSLayoutConstraint!
     
-//    Ads
-    lazy var ads = AdManager()
-    
     override func viewDidLoad() {
         guard airdrop != nil else {
             dismiss(animated: true, completion: nil)
@@ -70,10 +67,6 @@ class Airdrop_ViewController: UIViewController, UITextFieldDelegate, GADBannerVi
         setState()
         ui_amountInput.text = airdrop!.amount
         ui_referralAmountInput.text = airdrop?.referral
-        
-        // Ad
-        loadTopBannerAd(ads.bannerView)
-        ads.bannerView.delegate = self
         
         // Gestion des delegate
         ui_amountInput.delegate = self
@@ -132,47 +125,54 @@ class Airdrop_ViewController: UIViewController, UITextFieldDelegate, GADBannerVi
     }
     
     private func setValue(){
-        airdrop?.getValue(handler: { (valueJSON) in
-            if let data = valueJSON {
+        airdrop?.getValue(handler: { (value) in
+            if let value = value {
                 // Cacher la partie "Non listé"
                 self.ui_notListedContainer.addConstraint(NSLayoutConstraint(item: self.ui_notListedContainer, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 0))
                 
-                // Ligne d'information
-                let totalValue = data["price"].doubleValue * (self.airdrop!.totalAmount.amountToDouble() ?? 0)
+                let totalValue = value.getTotalValue(forAmount: (self.airdrop!.totalAmount.amountToDouble() ?? 0))
                 
                 self.ui_listedLabel.text = """
-                Valeur totale actuelle : \(totalValue.asAmount(withDigits: 2)) €
-                Ce token est listé à \(data["price"].doubleValue.asAmount(withMaxDigits: 4)) € / \(self.airdrop!.symbol!)
+                Valeur totale actuelle : \( totalValue.asAmount(withDigits: 2)) €
+                Ce token est listé à \(value.price.asAmount(withMaxDigits: 4)) € / \(self.airdrop!.symbol!)
                 """
                 
-                // Affichage des flèches
-                var diff1h = data["percent_change_1h"].doubleValue.asAmount(withMaxDigits: 3)
-                if !diff1h.contains("-") {
+                // Changement sur 1H
+                var diff1h = value.diff1h?.asAmount(withMaxDigits: 3)
+                if diff1h == nil {
+                    diff1h = "inconnu"
+                } else if !diff1h!.contains("-") {
                     self.ui_thisHourArrow.image = UIImage(named: "Arrow Up")
-                    diff1h = "+\(diff1h)"
+                    diff1h = "+\(diff1h!)"
                 }
-                var diff24h = data["percent_change_24h"].doubleValue.asAmount(withMaxDigits: 3)
-                if !diff24h.contains("-") {
+                // Changement sur 1 jour
+                var diff1d = value.diff1d?.asAmount(withMaxDigits: 3)
+                if diff1d == nil {
+                    diff1d = "inconnu"
+                } else if !diff1d!.contains("-") {
                     self.ui_todayArrow.image = UIImage(named: "Arrow Up")
-                    diff24h = "+\(diff24h)"
+                    diff1d = "+\(diff1d!)"
                 }
-                var diff7d = data["percent_change_7d"].doubleValue.asAmount(withMaxDigits: 3)
-                if !diff7d.contains("-") {
+                // Changement sur 1 semaine
+                var diff1w = value.diff1w?.asAmount(withMaxDigits: 3)
+                if diff1w == nil {
+                  diff1w = "inconnu"
+                } else if !diff1w!.contains("-") {
                     self.ui_weekArrow.image = UIImage(named: "Arrow Up")
-                    diff7d = "+\(diff7d)"
+                    diff1w = "+\(diff1w!)"
                 }
                 
                 // Affichage des valeurs
                 self.ui_thisHourLabel.text = """
-                \(diff1h)%
+                \(diff1h!)%
                 cette heure-ci
                 """
                 self.ui_dayLabel.text = """
-                \(diff24h)%
+                \(diff1d!)%
                 aujourd'hui
                 """
                 self.ui_weekLabel.text = """
-                \(diff7d)%
+                \(diff1w!)%
                 cette semaine
                 """
                 
@@ -343,11 +343,6 @@ class Airdrop_ViewController: UIViewController, UITextFieldDelegate, GADBannerVi
             let nextVC = segue.destination as? NewSale_ViewController {
             nextVC.airdrop = airdrop
         }
-    }
-    
-//    Ad delegate
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        displayAdView(bannerView)
     }
     
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewWallet_ViewController: UIViewController, UITextFieldDelegate {
+class NewWallet_ViewController: TopBarAd_ViewController, UITextFieldDelegate {
 
     @IBOutlet weak var ui_nameInput: MiTokens_TextField!
     @IBOutlet weak var ui_publicKeyInput: MiTokens_TextField!

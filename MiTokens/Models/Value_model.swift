@@ -1,46 +1,49 @@
 //
-//  Value_model.swift
+//  Value_Model.swift
 //  MiTokens
 //
-//  Created by Romain Penchenat on 03/06/2018.
+//  Created by Romain Penchenat on 07/07/2018.
 //  Copyright © 2018 Romain Penchenat. All rights reserved.
 //
 
-import RealmSwift
-import Realm
+import SwiftyJSON
 
-class Value:Object {
-    
-    @objc private dynamic var _smartContract:String
-    @objc private dynamic var _coinMarketCapID:String
-    
-    var coinMarketCapID: String {
-        return _coinMarketCapID
-    }
-    
-    required init() {
-        _smartContract = ""
-        _coinMarketCapID = ""
-        super.init()
-    }
-    
-    init(forSmartContract smartContract:String, linkToCMCId id:String) {
-        _smartContract = smartContract
-        _coinMarketCapID = id
-        super.init()
-    }
-    
-    required init(realm: RLMRealm, schema: RLMObjectSchema) {
-        _smartContract = ""
-        _coinMarketCapID = ""
-        super.init(realm: realm, schema: schema)
-    }
+enum valueSource {
+    case CoinMarketCap
+    case Idex
+}
 
-    required init(value: Any, schema: RLMSchema) {
-        _smartContract = ""
-        _coinMarketCapID = ""
-        super.init(value: value, schema: schema)
-
+class Value {
+    
+    var price:Double = 0
+    let diff1h:Double?
+    let diff1d:Double?
+    let diff1w:Double?
+    let lastUpdate:Date
+    
+    init(source:valueSource, jsonData:JSON) {
+//        print("-------------------")
+//        print(source)
+//        print(jsonData)
+//        print(" ")
+        lastUpdate = Date()
+        switch source {
+        case .CoinMarketCap:
+            price = jsonData["price"].doubleValue
+            diff1h = jsonData["percent_change_24h"].doubleValue
+            diff1d = jsonData["percent_change_1h"].doubleValue
+            diff1w = jsonData["percent_change_7d"].doubleValue
+        case .Idex:
+            // Transformer le prix en euro
+            diff1h = nil
+            diff1d = jsonData["percentChange"].double
+            diff1w = nil
+            price = jsonData["highestBid"].doubleValue * Singletons.Values.ETHPrice
+        }
+    }
+    
+    func getTotalValue(forAmount amount:Double) -> Double {
+        return price * amount
     }
     
 }

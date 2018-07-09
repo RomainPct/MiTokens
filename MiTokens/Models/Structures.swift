@@ -20,9 +20,9 @@ struct token {
     }
     func getValue(ofSmartContract thisSmartContract:String, wName:String, wSymbol:String, handler:@escaping(Double?) -> Void) {
         let lk = Link(betweenSmartContract: thisSmartContract, withName: wName, andSymbol: wSymbol, andAirdropId: 0, forWalletAddress: "")
-        Singletons.Values.getValue(ofLink: lk) { (jsonData) in
-            if let json = jsonData {
-                handler(json["price"].double)
+        Singletons.Values.getValue(ofLink: lk) { (value) in
+            if value != nil {
+                handler(value!.price)
             } else { handler(nil) }
         }
     }

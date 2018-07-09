@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class NewAirdrop_ViewController: UIViewController, UITextFieldDelegate {
+class NewAirdrop_ViewController: TopBarAd_ViewController, UITextFieldDelegate {
 
     var wasEdited:Bool = false
     

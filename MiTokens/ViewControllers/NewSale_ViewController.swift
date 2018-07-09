@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewSale_ViewController: UIViewController, UITextFieldDelegate {
+class NewSale_ViewController: TopBarAd_ViewController, UITextFieldDelegate {
     
     @IBOutlet weak var ui_amountInput: MiTokens_TextField!
     @IBOutlet weak var ui_tokensLabel: Body_label!
@@ -23,9 +23,9 @@ class NewSale_ViewController: UIViewController, UITextFieldDelegate {
             ui_amountInput.text = airdrop!.totalAmount.stringByRemovingWhitespaces
             ui_amountInput.inputState = .filled
             ui_tokensLabel.text = airdrop!.symbol!
-            airdrop?.getValue(handler: { (data) in
-                if data != nil {
-                    let totalValue = data!["price"].doubleValue * (self.airdrop!.totalAmount.amountToDouble() ?? 0)
+            airdrop?.getValue(handler: { (value) in
+                if value != nil {
+                    let totalValue = value!.getTotalValue(forAmount: (self.airdrop!.totalAmount.amountToDouble() ?? 0))
                     self.ui_valueInput.text = totalValue.asAmount(withMaxDigits: 2)
                     self.ui_valueInput.inputState = .filled
                 }

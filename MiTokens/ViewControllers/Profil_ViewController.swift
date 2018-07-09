@@ -84,7 +84,9 @@ class Profil_ViewController: UIViewController, UIApplicationDelegate {
         }
     }
     fileprivate func setTokenReceivedNotification() {
-        let cancelAction = UIAlertAction(title: "Annuler", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Annuler", style: .cancel) { (_) in
+            self.setNotifications()
+        }
         if notifManager.TokensReceivedNotification {
             let alert = UIAlertController(title: "Ne plus recevoir de notifications lorsque vous recevez des tokens", message: "Souhaitez-vous vraiment ne plus être alerter lorsque vous recevez des tokens sur vos wallets ?", preferredStyle: .actionSheet)
             alert.addAction(cancelAction)
@@ -112,7 +114,9 @@ class Profil_ViewController: UIViewController, UIApplicationDelegate {
         }
     }
     fileprivate func setTokenListedNotification() {
-        let cancelAction = UIAlertAction(title: "Annuler", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Annuler", style: .cancel) { (_) in
+            self.setNotifications()
+        }
         if notifManager.TokenListedNotification {
             let alert = UIAlertController(title: "Ne plus recevoir de notifications lorsqu'un de mes tokens est listé", message: "Souhaitez-vous vraiment ne plus être alerter lorsque l'un de vos tokens est listé sur une plateforme d'échange ?", preferredStyle: .actionSheet)
             alert.addAction(cancelAction)

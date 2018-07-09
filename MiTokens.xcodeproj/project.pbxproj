@@ -13,6 +13,8 @@
 		DE08FA1E20B359B7008E1C01 /* NavBar_button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE08FA1D20B359B7008E1C01 /* NavBar_button.swift */; };
 		DE08FA2020B35F53008E1C01 /* Wallets_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE08FA1F20B35F53008E1C01 /* Wallets_ViewController.swift */; };
 		DE303E6120A5BE100050E44C /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE303E6020A5BE100050E44C /* ScrollView.swift */; };
+		DE3086FD20F1112F00F90DA5 /* TopBarAd_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3086FC20F1112F00F90DA5 /* TopBarAd_ViewController.swift */; };
+		DE3086FF20F11EB200F90DA5 /* Value_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3086FE20F11EB200F90DA5 /* Value_Model.swift */; };
 		DE30AE8120CBD20500B9AA5A /* ViewController_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE30AE8020CBD20500B9AA5A /* ViewController_extension.swift */; };
 		DE30AE8320CBD34700B9AA5A /* AdManager_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE30AE8220CBD34700B9AA5A /* AdManager_Model.swift */; };
 		DE38772020D5692000054BF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE38771F20D5692000054BF8 /* GoogleService-Info.plist */; };
@@ -42,7 +44,7 @@
 		DE82503B209F7A6B00084A23 /* Singletons_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82503A209F7A6A00084A23 /* Singletons_Model.swift */; };
 		DE82503D209F809600084A23 /* WalletsDatabase_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82503C209F809600084A23 /* WalletsDatabase_Model.swift */; };
 		DEA8F70E20B957380088AA5E /* UIStoryboardSegueWithCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA8F70D20B957380088AA5E /* UIStoryboardSegueWithCompletion.swift */; };
-		DEAB9E8A20C45C87001EAD15 /* Value_model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB9E8920C45C87001EAD15 /* Value_model.swift */; };
+		DEAB9E8A20C45C87001EAD15 /* CMClinkForValue_model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB9E8920C45C87001EAD15 /* CMClinkForValue_model.swift */; };
 		DEAB9E8C20C46B4E001EAD15 /* ValuesManager_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB9E8B20C46B4E001EAD15 /* ValuesManager_Model.swift */; };
 		DEB2050D20A1AB660052D0E0 /* Airdrop_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2050C20A1AB660052D0E0 /* Airdrop_Model.swift */; };
 		DEB9FA18209E3149005661A7 /* MiTokens_searchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9FA17209E3149005661A7 /* MiTokens_searchBar.swift */; };
@@ -71,6 +73,8 @@
 		DE08FA1D20B359B7008E1C01 /* NavBar_button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar_button.swift; sourceTree = "<group>"; };
 		DE08FA1F20B35F53008E1C01 /* Wallets_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallets_ViewController.swift; sourceTree = "<group>"; };
 		DE303E6020A5BE100050E44C /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		DE3086FC20F1112F00F90DA5 /* TopBarAd_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarAd_ViewController.swift; sourceTree = "<group>"; };
+		DE3086FE20F11EB200F90DA5 /* Value_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value_Model.swift; sourceTree = "<group>"; };
 		DE30AE8020CBD20500B9AA5A /* ViewController_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_extension.swift; sourceTree = "<group>"; };
 		DE30AE8220CBD34700B9AA5A /* AdManager_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager_Model.swift; sourceTree = "<group>"; };
 		DE38771F20D5692000054BF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -103,7 +107,7 @@
 		DE82503C209F809600084A23 /* WalletsDatabase_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsDatabase_Model.swift; sourceTree = "<group>"; };
 		DEA433CC20D55DB900CF832E /* MiTokens.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MiTokens.entitlements; sourceTree = "<group>"; };
 		DEA8F70D20B957380088AA5E /* UIStoryboardSegueWithCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardSegueWithCompletion.swift; sourceTree = "<group>"; };
-		DEAB9E8920C45C87001EAD15 /* Value_model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value_model.swift; sourceTree = "<group>"; };
+		DEAB9E8920C45C87001EAD15 /* CMClinkForValue_model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMClinkForValue_model.swift; sourceTree = "<group>"; };
 		DEAB9E8B20C46B4E001EAD15 /* ValuesManager_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuesManager_Model.swift; sourceTree = "<group>"; };
 		DEB2050C20A1AB660052D0E0 /* Airdrop_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airdrop_Model.swift; sourceTree = "<group>"; };
 		DEB9FA17209E3149005661A7 /* MiTokens_searchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiTokens_searchBar.swift; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 				DE5E721D20BABCA300CA80BA /* NewAirdrop_ViewController.swift */,
 				DE4485D120BDD48400DB5819 /* CreateALink_ViewController.swift */,
 				DE5109E620C81E2000140312 /* NewSale_ViewController.swift */,
+				DE3086FC20F1112F00F90DA5 /* TopBarAd_ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 		DE825033209F3F5D00084A23 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DEE4B16D20B73FE10005705F /* Structures.swift */,
 				DE82503A209F7A6A00084A23 /* Singletons_Model.swift */,
 				DE825034209F3F8C00084A23 /* APIManager_Model.swift */,
 				DE82503C209F809600084A23 /* WalletsDatabase_Model.swift */,
@@ -270,10 +276,10 @@
 				DE825036209F4EBE00084A23 /* Wallet_Model.swift */,
 				DEB2050C20A1AB660052D0E0 /* Airdrop_Model.swift */,
 				DE00CFF420BEE471001F6C92 /* Link_Model.swift */,
-				DEAB9E8920C45C87001EAD15 /* Value_model.swift */,
-				DEE4B16D20B73FE10005705F /* Structures.swift */,
+				DEAB9E8920C45C87001EAD15 /* CMClinkForValue_model.swift */,
 				DE30AE8220CBD34700B9AA5A /* AdManager_Model.swift */,
 				DE52C69820D4F7ED0051B582 /* NotificationsManager.swift */,
+				DE3086FE20F11EB200F90DA5 /* Value_Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -464,6 +470,7 @@
 				DE5109E720C81E2100140312 /* NewSale_ViewController.swift in Sources */,
 				DEBFE0F620C8613300801BE7 /* Date_Extension.swift in Sources */,
 				DEA8F70E20B957380088AA5E /* UIStoryboardSegueWithCompletion.swift in Sources */,
+				DE3086FD20F1112F00F90DA5 /* TopBarAd_ViewController.swift in Sources */,
 				DE5BF57C209DA93200EA5BF6 /* HomeViewController.swift in Sources */,
 				DE00CFF720BEEA40001F6C92 /* LinksDatabase_Model.swift in Sources */,
 				DE82503B209F7A6B00084A23 /* Singletons_Model.swift in Sources */,
@@ -486,7 +493,8 @@
 				DEE4B16E20B73FE10005705F /* Structures.swift in Sources */,
 				DE825028209EF31800084A23 /* MiTokens_button.swift in Sources */,
 				DE08FA1E20B359B7008E1C01 /* NavBar_button.swift in Sources */,
-				DEAB9E8A20C45C87001EAD15 /* Value_model.swift in Sources */,
+				DEAB9E8A20C45C87001EAD15 /* CMClinkForValue_model.swift in Sources */,
+				DE3086FF20F11EB200F90DA5 /* Value_Model.swift in Sources */,
 				DEEB548420A479910071A064 /* Airdrop_ViewController.swift in Sources */,
 				DE82502A209EF73E00084A23 /* ColorIndicator_view.swift in Sources */,
 				DE825039209F58F500084A23 /* AirdropsDatabase_Model.swift in Sources */,

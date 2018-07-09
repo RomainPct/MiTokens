@@ -26,157 +26,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Rechercher un airdrop" translatesAutoresizingMaskIntoConstraints="NO" id="itO-XA-xn0" customClass="MiTokens_searchBar" customModule="MiTokens" customModuleProvider="target">
-                                <rect key="frame" x="13" y="109" width="349" height="56"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                <scopeButtonTitles>
-                                    <string>Title</string>
-                                    <string>Title</string>
-                                </scopeButtonTitles>
-                            </searchBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="3Hg-Fa-99N">
-                                <rect key="frame" x="13" y="178" width="349" height="13"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MmZ-GQ-3XY">
-                                        <rect key="frame" x="0.0" y="0.0" width="102.33333333333333" height="13"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtS-7a-KAx" customClass="KGRadioButton" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="13" height="13"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="13" id="IWH-md-gMb"/>
-                                                    <constraint firstAttribute="width" secondItem="QtS-7a-KAx" secondAttribute="height" multiplier="1:1" id="ShO-hJ-gzv"/>
-                                                </constraints>
-                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="outerCircleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="innerCircleCircleColor">
-                                                        <color key="value" red="1" green="0.54117647058823526" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En attente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1B-lc-vk8" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="-3.6666666666666572" width="86.333333333333329" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="j1B-lc-vk8" secondAttribute="trailing" id="6Ov-D9-Qev"/>
-                                            <constraint firstItem="j1B-lc-vk8" firstAttribute="centerY" secondItem="MmZ-GQ-3XY" secondAttribute="centerY" id="G2J-HI-Gq9"/>
-                                            <constraint firstItem="j1B-lc-vk8" firstAttribute="leading" secondItem="QtS-7a-KAx" secondAttribute="trailing" constant="3" id="cGV-IW-eGC"/>
-                                            <constraint firstItem="QtS-7a-KAx" firstAttribute="leading" secondItem="MmZ-GQ-3XY" secondAttribute="leading" id="hbf-6k-EZ2"/>
-                                            <constraint firstItem="QtS-7a-KAx" firstAttribute="top" secondItem="MmZ-GQ-3XY" secondAttribute="top" id="qo2-Qt-Imk"/>
-                                            <constraint firstAttribute="bottom" secondItem="QtS-7a-KAx" secondAttribute="bottom" id="xGx-Fp-5sT"/>
-                                        </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="rBo-Kx-HjL" appends="YES" id="udC-qN-VRT"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbe-Vg-7Xg">
-                                        <rect key="frame" x="123.33333333333334" y="0.0" width="102.33333333333334" height="13"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pa-de-Vzr" customClass="KGRadioButton" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="13" height="13"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="13" id="0Pd-aG-Yp7"/>
-                                                    <constraint firstAttribute="width" secondItem="2Pa-de-Vzr" secondAttribute="height" multiplier="1:1" id="UjP-AC-Rzp"/>
-                                                </constraints>
-                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="outerCircleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="innerCircleCircleColor">
-                                                        <color key="value" red="0.13725490196078433" green="0.90980392156862744" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reçus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q64-ez-Tuh" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="-3.3333333333333428" width="86.333333333333329" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstItem="q64-ez-Tuh" firstAttribute="leading" secondItem="2Pa-de-Vzr" secondAttribute="trailing" constant="3" id="6Em-lC-dU3"/>
-                                            <constraint firstItem="q64-ez-Tuh" firstAttribute="centerY" secondItem="zbe-Vg-7Xg" secondAttribute="centerY" id="Gqh-pk-1vq"/>
-                                            <constraint firstItem="2Pa-de-Vzr" firstAttribute="leading" secondItem="zbe-Vg-7Xg" secondAttribute="leading" id="KIe-45-Vmp"/>
-                                            <constraint firstItem="2Pa-de-Vzr" firstAttribute="top" secondItem="zbe-Vg-7Xg" secondAttribute="top" id="Y0G-cN-cKS"/>
-                                            <constraint firstAttribute="trailing" secondItem="q64-ez-Tuh" secondAttribute="trailing" id="ue3-uI-XlH"/>
-                                            <constraint firstAttribute="bottom" secondItem="2Pa-de-Vzr" secondAttribute="bottom" id="y8O-Xm-RHg"/>
-                                        </constraints>
-                                        <viewLayoutGuide key="safeArea" id="2Mi-yc-g08"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="WV1-Gm-1eE" appends="YES" id="1cJ-yA-WxP"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cN5-Ia-g3m">
-                                        <rect key="frame" x="246.66666666666671" y="0.0" width="102.33333333333334" height="13"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMe-65-QzQ" customClass="KGRadioButton" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="13" height="13"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="13" id="AAZ-rz-wrO"/>
-                                                    <constraint firstAttribute="width" secondItem="jMe-65-QzQ" secondAttribute="height" multiplier="1:1" id="jxS-gh-mtQ"/>
-                                                </constraints>
-                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="outerCircleColor">
-                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="innerCircleCircleColor">
-                                                        <color key="value" red="0.13725490196078433" green="0.60784313725490191" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vendus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ey-ek-Dlu" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="-3.3333333333333428" width="86.333333333333329" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="5ey-ek-Dlu" secondAttribute="trailing" id="Pmn-op-CaH"/>
-                                            <constraint firstItem="jMe-65-QzQ" firstAttribute="top" secondItem="cN5-Ia-g3m" secondAttribute="top" id="aUr-Zg-Xye"/>
-                                            <constraint firstItem="jMe-65-QzQ" firstAttribute="leading" secondItem="cN5-Ia-g3m" secondAttribute="leading" id="bDd-MY-hOu"/>
-                                            <constraint firstItem="5ey-ek-Dlu" firstAttribute="centerY" secondItem="cN5-Ia-g3m" secondAttribute="centerY" id="qDl-or-WcK"/>
-                                            <constraint firstItem="5ey-ek-Dlu" firstAttribute="leading" secondItem="jMe-65-QzQ" secondAttribute="trailing" constant="3" id="rRc-ig-me6"/>
-                                            <constraint firstAttribute="bottom" secondItem="jMe-65-QzQ" secondAttribute="bottom" id="rRl-fB-jEg"/>
-                                        </constraints>
-                                        <viewLayoutGuide key="safeArea" id="kWP-DT-gSc"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="9JN-JS-6LA" appends="YES" id="jdW-xS-3nM"/>
-                                        </connections>
-                                    </view>
-                                </subviews>
-                            </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8dy-2E-mCc">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8dy-2E-mCc">
                                 <rect key="frame" x="8" y="212" width="359" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="1H4-v4-g7C">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="50" height="50"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
@@ -261,6 +117,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer" id="ik6-m8-faG">
+                                    <rect key="frame" x="0.0" y="90" width="359" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIv-s9-IZh" customClass="MiTokens_button" customModule="MiTokens" customModuleProvider="target">
                                 <rect key="frame" x="55" y="735" width="265" height="30"/>
@@ -300,6 +160,147 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <color key="backgroundColor" name="Blue"/>
                             </view>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Rechercher un airdrop" translatesAutoresizingMaskIntoConstraints="NO" id="itO-XA-xn0" customClass="MiTokens_searchBar" customModule="MiTokens" customModuleProvider="target">
+                                <rect key="frame" x="13" y="109" width="349" height="56"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="3Hg-Fa-99N">
+                                <rect key="frame" x="13" y="173" width="349" height="26"/>
+                                <subviews>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MmZ-GQ-3XY">
+                                        <rect key="frame" x="0.0" y="0.0" width="102.33333333333333" height="26"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtS-7a-KAx" customClass="KGRadioButton" customModule="MiTokens" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="5" width="13" height="13"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="13" id="IWH-md-gMb"/>
+                                                    <constraint firstAttribute="width" secondItem="QtS-7a-KAx" secondAttribute="height" multiplier="1:1" id="ShO-hJ-gzv"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="outerCircleColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="innerCircleCircleColor">
+                                                        <color key="value" red="1" green="0.54117647058823526" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En attente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1B-lc-vk8" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="3.3333333333333428" width="86.333333333333329" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="j1B-lc-vk8" secondAttribute="trailing" id="6Ov-D9-Qev"/>
+                                            <constraint firstItem="j1B-lc-vk8" firstAttribute="centerY" secondItem="MmZ-GQ-3XY" secondAttribute="centerY" id="G2J-HI-Gq9"/>
+                                            <constraint firstItem="j1B-lc-vk8" firstAttribute="leading" secondItem="QtS-7a-KAx" secondAttribute="trailing" constant="3" id="cGV-IW-eGC"/>
+                                            <constraint firstItem="QtS-7a-KAx" firstAttribute="leading" secondItem="MmZ-GQ-3XY" secondAttribute="leading" id="hbf-6k-EZ2"/>
+                                            <constraint firstItem="QtS-7a-KAx" firstAttribute="top" secondItem="MmZ-GQ-3XY" secondAttribute="top" constant="5" id="qo2-Qt-Imk"/>
+                                            <constraint firstAttribute="bottom" secondItem="QtS-7a-KAx" secondAttribute="bottom" constant="8" id="xGx-Fp-5sT"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="rBo-Kx-HjL" appends="YES" id="udC-qN-VRT"/>
+                                        </connections>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbe-Vg-7Xg">
+                                        <rect key="frame" x="123.33333333333334" y="0.0" width="102.33333333333334" height="26"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pa-de-Vzr" customClass="KGRadioButton" customModule="MiTokens" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="5" width="13" height="13"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="13" id="0Pd-aG-Yp7"/>
+                                                    <constraint firstAttribute="width" secondItem="2Pa-de-Vzr" secondAttribute="height" multiplier="1:1" id="UjP-AC-Rzp"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="outerCircleColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="innerCircleCircleColor">
+                                                        <color key="value" red="0.13725490196078433" green="0.90980392156862744" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reçus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q64-ez-Tuh" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="3.3333333333333428" width="86.333333333333329" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="q64-ez-Tuh" firstAttribute="leading" secondItem="2Pa-de-Vzr" secondAttribute="trailing" constant="3" id="6Em-lC-dU3"/>
+                                            <constraint firstItem="q64-ez-Tuh" firstAttribute="centerY" secondItem="zbe-Vg-7Xg" secondAttribute="centerY" id="Gqh-pk-1vq"/>
+                                            <constraint firstItem="2Pa-de-Vzr" firstAttribute="leading" secondItem="zbe-Vg-7Xg" secondAttribute="leading" id="KIe-45-Vmp"/>
+                                            <constraint firstItem="2Pa-de-Vzr" firstAttribute="top" secondItem="zbe-Vg-7Xg" secondAttribute="top" constant="5" id="Y0G-cN-cKS"/>
+                                            <constraint firstAttribute="trailing" secondItem="q64-ez-Tuh" secondAttribute="trailing" id="ue3-uI-XlH"/>
+                                            <constraint firstAttribute="bottom" secondItem="2Pa-de-Vzr" secondAttribute="bottom" constant="8" id="y8O-Xm-RHg"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="2Mi-yc-g08"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="WV1-Gm-1eE" appends="YES" id="1cJ-yA-WxP"/>
+                                        </connections>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cN5-Ia-g3m">
+                                        <rect key="frame" x="246.66666666666671" y="0.0" width="102.33333333333334" height="26"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMe-65-QzQ" customClass="KGRadioButton" customModule="MiTokens" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="5" width="13" height="13"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="13" id="AAZ-rz-wrO"/>
+                                                    <constraint firstAttribute="width" secondItem="jMe-65-QzQ" secondAttribute="height" multiplier="1:1" id="jxS-gh-mtQ"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="outerCircleColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="innerCircleCircleColor">
+                                                        <color key="value" red="0.13725490196078433" green="0.60784313725490191" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vendus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ey-ek-Dlu" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="3.3333333333333428" width="86.333333333333329" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="5ey-ek-Dlu" secondAttribute="trailing" id="Pmn-op-CaH"/>
+                                            <constraint firstItem="jMe-65-QzQ" firstAttribute="top" secondItem="cN5-Ia-g3m" secondAttribute="top" constant="5" id="aUr-Zg-Xye"/>
+                                            <constraint firstItem="jMe-65-QzQ" firstAttribute="leading" secondItem="cN5-Ia-g3m" secondAttribute="leading" id="bDd-MY-hOu"/>
+                                            <constraint firstItem="5ey-ek-Dlu" firstAttribute="centerY" secondItem="cN5-Ia-g3m" secondAttribute="centerY" id="qDl-or-WcK"/>
+                                            <constraint firstItem="5ey-ek-Dlu" firstAttribute="leading" secondItem="jMe-65-QzQ" secondAttribute="trailing" constant="3" id="rRc-ig-me6"/>
+                                            <constraint firstAttribute="bottom" secondItem="jMe-65-QzQ" secondAttribute="bottom" constant="8" id="rRl-fB-jEg"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="kWP-DT-gSc"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="9JN-JS-6LA" appends="YES" id="jdW-xS-3nM"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -309,14 +310,14 @@
                             <constraint firstItem="YIv-s9-IZh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="G6R-vf-UfQ"/>
                             <constraint firstItem="iYG-45-7Az" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LOP-nS-TFy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8dy-2E-mCc" secondAttribute="trailing" constant="8" id="RkR-GL-KdO"/>
-                            <constraint firstItem="8dy-2E-mCc" firstAttribute="top" secondItem="3Hg-Fa-99N" secondAttribute="bottom" constant="21" id="SRg-Qs-cu8"/>
+                            <constraint firstItem="8dy-2E-mCc" firstAttribute="top" secondItem="3Hg-Fa-99N" secondAttribute="bottom" constant="13" id="SRg-Qs-cu8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="itO-XA-xn0" secondAttribute="trailing" constant="13" id="UDl-q3-E9a"/>
                             <constraint firstItem="iYG-45-7Az" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XsB-6I-CIW"/>
                             <constraint firstItem="hd1-UG-PrR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZBA-p4-Sog"/>
                             <constraint firstItem="3Hg-Fa-99N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bE0-xQ-SZC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hd1-UG-PrR" secondAttribute="trailing" id="bx6-JL-VG6"/>
                             <constraint firstItem="itO-XA-xn0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="13" id="c4t-Kx-o0M"/>
-                            <constraint firstItem="3Hg-Fa-99N" firstAttribute="top" secondItem="itO-XA-xn0" secondAttribute="bottom" constant="13" id="dX9-Si-sPp"/>
+                            <constraint firstItem="3Hg-Fa-99N" firstAttribute="top" secondItem="itO-XA-xn0" secondAttribute="bottom" constant="8" id="dX9-Si-sPp"/>
                             <constraint firstItem="hd1-UG-PrR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eB1-Ut-dgT"/>
                             <constraint firstItem="8dy-2E-mCc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="hVv-Rt-Khz"/>
                             <constraint firstAttribute="bottom" secondItem="8dy-2E-mCc" secondAttribute="bottom" id="jkQ-Ah-Txd"/>
@@ -1021,10 +1022,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantité referral" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PEK-0M-0wf" customClass="MiTokens_TextField" customModule="MiTokens" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantité referral (optionnel)" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PEK-0M-0wf" customClass="MiTokens_TextField" customModule="MiTokens" customModuleProvider="target">
                                         <rect key="frame" x="16" y="133" width="153.66666666666666" height="30"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLh-7O-bsk" customClass="MiTokens_button" customModule="MiTokens" customModuleProvider="target">
@@ -1381,7 +1382,7 @@ Adresse du smart contract :
                                                         </connections>
                                                     </view>
                                                     <view hidden="YES" opaque="NO" clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qW2-QW-Ohm" customClass="GreyView" customModule="MiTokens" customModuleProvider="target">
-                                                        <rect key="frame" x="-35" y="-582.33333333333337" width="0.0" height="34"/>
+                                                        <rect key="frame" x="-27" y="-582.33333333333337" width="0.0" height="34"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rvA-07-62g" customClass="ColorIndicator_view" customModule="MiTokens" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="8" height="34"/>
@@ -1433,7 +1434,7 @@ Adresse du smart contract :
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantité referral" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZeF-wx-G8g" customClass="MiTokens_TextField" customModule="MiTokens" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantité referral (optionnel)" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZeF-wx-G8g" customClass="MiTokens_TextField" customModule="MiTokens" customModuleProvider="target">
                                                         <rect key="frame" x="177" y="-43" width="150.66666666666663" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1878,10 +1879,10 @@ Valeur totale estimée : 217€</string>
                                     <constraint firstItem="49x-DI-YTE" firstAttribute="leading" secondItem="Gyx-HZ-2Mq" secondAttribute="leading" constant="13" id="sR0-jt-RUP"/>
                                 </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0X7-61-WyY">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0X7-61-WyY">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Paramétres" id="hOh-nO-K5v" customClass="MiTokens_UINavigationItem" customModule="MiTokens" customModuleProvider="target">
+                                    <navigationItem title="Profil" id="hOh-nO-K5v" customClass="MiTokens_UINavigationItem" customModule="MiTokens" customModuleProvider="target">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="B0F-xn-2yu">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ni3-DA-fqY" customClass="NavBar_button" customModule="MiTokens" customModuleProvider="target">
                                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
@@ -1961,6 +1962,6 @@ Valeur totale estimée : 217€</string>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fHT-u0-qBe"/>
+        <segue reference="ODs-4u-rsY"/>
     </inferredMetricsTieBreakers>
 </document>

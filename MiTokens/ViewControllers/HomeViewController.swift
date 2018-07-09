@@ -42,6 +42,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         ui_collectionView.dataSource = self
         ui_collectionView.delegate = self
         ui_collectionViewFlow.itemSize = cellSize
+        ui_collectionViewFlow.footerReferenceSize = CGSize(width: 0, height: 56)
         // Navigation
         navigationController?.navigationBar.isTranslucent = false
         // Filters
@@ -66,10 +67,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         cell.bounds.size = cellSize
         let airdrop = _AirdropsList[indexPath.row]
         cell.ui_nameLabel.text = airdrop.name
-        airdrop.getValue { (data) in
-            if data != nil,
-                let price = data!["price"].double {
-                let totalValue = price * (airdrop.totalAmount.amountToDouble() ?? 0)
+        airdrop.getValue { (value) in
+            if value != nil {
+                let totalValue = value!.getTotalValue(forAmount: (airdrop.totalAmount.amountToDouble() ?? 0))
                 cell.ui_priceLabel.text = "Valeur : \(totalValue.asAmount(withMaxDigits: 2)) €"
             } else {
                 cell.ui_priceLabel.text = ""
@@ -89,6 +89,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 cell.ui_colorIndicator.backgroundColor = UIColor(named: "Blue")
             }
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let footerView = ui_collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath)
+        return footerView
     }
     
 //    Collection view delegate

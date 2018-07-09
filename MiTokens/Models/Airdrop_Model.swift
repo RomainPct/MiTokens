@@ -85,8 +85,6 @@ class Airdrop:Object {
         return Singletons.LinksDB.getLink(forAirdrop: self)
     }
     
-    var value:JSON?
-    
     convenience init(name:String,symbol:String,amount:String,referral:String) {
         self.init()
         _name = name
@@ -111,18 +109,13 @@ class Airdrop:Object {
         _saleDate = Date()
     }
     
-    func getValue(handler:@escaping(JSON?)->Void){
-        if value == nil {
-            if let selfLink = link {
-                Singletons.Values.getValue(ofLink: selfLink) { (jsonData) in
-                    self.value = jsonData
-                    handler(jsonData)
-                }
-            } else {
-                handler(nil)
+    func getValue(handler:@escaping(Value?)->Void){
+        if let selfLink = link {
+            Singletons.Values.getValue(ofLink: selfLink) { (value) in
+                handler(value)
             }
         } else {
-            handler(value)
+            handler(nil)
         }
     }
     

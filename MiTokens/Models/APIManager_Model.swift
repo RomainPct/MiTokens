@@ -48,8 +48,20 @@ class APIManager {
         }
     }
     
-    func getValue(forCMCId id:String, handler:@escaping(JSON) -> Void) {
+    func getValueOnCMC(forCMCId id:String, handler:@escaping(JSON) -> Void) {
         let urlString = "https://api.coinmarketcap.com/v2/ticker/\(id)/?convert=EUR"
+        if let url = URL(string: urlString) {
+            Alamofire.request(url).responseJSON { (response) in
+                if let data = response.data,
+                    let json = try? JSON(data: data) {
+                    handler(json)
+                }
+            }
+        }
+    }
+    
+    func getValueOnIdex(forSymbol symbol:String, handler:@escaping(JSON) -> Void){
+        let urlString = "https://api.idex.market/returnTicker?market=ETH_\(symbol)"
         if let url = URL(string: urlString) {
             Alamofire.request(url).responseJSON { (response) in
                 if let data = response.data,
