@@ -33,9 +33,12 @@ class MiTokens_searchBar: UISearchBar {
             // Set the font and text color of the search field.
             searchField.font = UIFont(name: "Raleway-Regular", size: 13)
             searchField.textColor = UIColor.black
-            
             // Set the background color of the search field.
-            searchField.layer.backgroundColor = UIColor(named: "Grey")?.cgColor
+            searchField.backgroundColor = UIColor.white
+            searchField.layer.backgroundColor = UIColor.white.cgColor
+            
+            let textFieldInsideSearchBarLabel = searchField.value(forKey: "placeholderLabel") as? UILabel
+//            textFieldInsideSearchBarLabel.textColor = UIColor.black
         }
         super.draw(rect)
     }

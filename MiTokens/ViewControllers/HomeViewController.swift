@@ -23,12 +23,14 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     var targetAirdropRedirection:Airdrop?
     
 //    Filters
-    
     @IBOutlet weak var ui_searchInput: MiTokens_searchBar!
     @IBOutlet weak var ui_waitingRadio: KGRadioButton!
     @IBOutlet weak var ui_receivedRadio: KGRadioButton!
     @IBOutlet weak var ui_soldRadio: KGRadioButton!
     
+//    Intro
+    @IBOutlet weak var ui_introduction: WhiteView!
+    lazy var cs_introductionHeight = NSLayoutConstraint(item: ui_introduction, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 0)
     
 //    Collection
     @IBOutlet weak var ui_collectionView: UICollectionView!
@@ -59,6 +61,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
 //    DataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if !_AirdropsList.isEmpty {
+            ui_introduction.addConstraint(cs_introductionHeight)
+        } else if cs_introductionHeight.isActive, _AirdropsList.isEmpty {
+            cs_introductionHeight.isActive = false
+        }
         return _AirdropsList.count
     }
     
