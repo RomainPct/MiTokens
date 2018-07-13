@@ -38,7 +38,7 @@ class AirdropsDatabase {
     }
     
     func getNewId() -> Int {
-        var id = 0
+        var id = 1
         if let lastID = _realm?.objects(Airdrop.self).sorted(byKeyPath: "_airdropId").last?.airdropID {
             id = lastID + 1
         }

@@ -98,7 +98,7 @@ class Wallets_ViewController: UIViewController, UICollectionViewDataSource, UITa
             sender.isAvalaible = true
             // Charger les tokens sur le wallet
             loadTokens(wFocusedWallet: position)
-//            ui_tokensTableView.reloadData()
+            ui_tokensTableView.reloadData()
         } else {
             performSegue(withIdentifier: "showAddWalletForm", sender: nil)
         }
@@ -137,6 +137,7 @@ class Wallets_ViewController: UIViewController, UICollectionViewDataSource, UITa
                     cell.ui_linkLabel.isHidden = true
                 } else if let airdrop = Singletons.AirdropsDB.getAirdrop(withId: token.getLink(inWallet: _focusedWallet!)!.airdropId) {
                     cell.ui_linkLabel.text = "associé à \(airdrop.name)"
+                    cell.ui_linkLabel.isHidden = false
                 }
                 token.getValue(ofSmartContract: token.smartContract, wName: token.name, wSymbol: token.symbol) { (value) in
                     if value != nil {

@@ -53,7 +53,6 @@ class WalletsDatabase {
     func verifIfWalletAddressIsNotAlreadyRegister(_ erc20address:String) -> Bool {
         for wallet in wallets_list {
             if wallet.erc20Address == erc20address.lowercased() {
-                print("false")
                 return false
             }
         }

@@ -97,7 +97,6 @@ class NotificationManager {
     func turnOnTokenReceivedNotification(handler:@escaping ()->Void){
         DispatchQueue.global(qos: .background).async {
             while self.notificationToken == nil {
-                print("wait")
                 sleep(1)
             }
             self._keychain[self._KEY_tokendReceived] = true.description
@@ -142,7 +141,6 @@ class NotificationManager {
     func turnOnTokenListedNotification(handler:@escaping ()->Void){
         DispatchQueue.global(qos: .background).async {
             while self.notificationToken == nil {
-                print("wait")
                 sleep(1)
             }
             self._keychain[self._KEY_tokenListed] = true.description

@@ -25,7 +25,6 @@ class APIManager {
                     if data["error"] == JSON.null {
                         received(data)
                     } else {
-                        print(data)
                         received(nil)
                     }
                 } else {

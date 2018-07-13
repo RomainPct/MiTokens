@@ -51,9 +51,9 @@ class ValuesManager {
     func getValue(ofLink link:Link, handler:@escaping(Value?) -> Void ) {
         setETHPrice {
             // Vérifier si la valeur est déja enregistré et si elle est récente
-            if self.valuesList[link.tokenSymbol] != nil {
-                print(Date().timeIntervalSince(self.valuesList[link.tokenSymbol]!.lastUpdate).isLess(than: 60))
-            }
+//            if self.valuesList[link.tokenSymbol] != nil {
+//                print(" ETH price need reload : \(Date().timeIntervalSince(self.valuesList[link.tokenSymbol]!.lastUpdate).isLess(than: 60))")
+//            }
             if self.valuesList[link.tokenSymbol] == nil ||
                 !Date().timeIntervalSince(self.valuesList[link.tokenSymbol]!.lastUpdate).isLess(than: 60) {
                 // Récupérer le l'id Coin Market Cap

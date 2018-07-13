@@ -63,8 +63,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if !_AirdropsList.isEmpty {
             ui_introduction.addConstraint(cs_introductionHeight)
+            ui_introduction.clipsToBounds = true
         } else if cs_introductionHeight.isActive, _AirdropsList.isEmpty {
             cs_introductionHeight.isActive = false
+            ui_introduction.clipsToBounds = false
         }
         return _AirdropsList.count
     }
