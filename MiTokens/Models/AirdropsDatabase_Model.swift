@@ -104,7 +104,7 @@ class AirdropsDatabase {
             }
             tokenList[token.smartContract] = []
             var i = 0
-            while i <= 10{
+            while i <= 20{
                 for airdrop in levenshteinArray[i] ?? [] {
                     tokenList[token.smartContract]!.append(airdrop)
                 }

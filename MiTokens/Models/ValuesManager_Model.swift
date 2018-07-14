@@ -15,6 +15,13 @@ class ValuesManager {
     internal let _realm:Realm?
     private var _coinMarketCapListing:Listing?
     private var valuesList:[String:Value] = [:]
+    fileprivate var _isSettingETHPrice = false {
+        didSet {
+            if !_isSettingETHPrice {
+                NotificationCenter.default.post(name: NSNotification.Name.ETHPriceIsUpdate, object: nil)
+            }
+        }
+    }
     
     var ETHPrice: Double {
         return valuesList["ETH"]?.price  ?? 0
@@ -25,10 +32,17 @@ class ValuesManager {
             Date().timeIntervalSince(valuesList["ETH"]!.lastUpdate).isLess(than: 60) {
             handler()
         } else {
-            print("setETHPrice")
-            Singletons.API.getValueOnCMC(forCMCId: "1027") { (jsonData) in
-                self.valuesList["ETH"] = Value(source: .CoinMarketCap, jsonData: jsonData["data"]["quotes"]["EUR"])
-                handler()
+            if !_isSettingETHPrice {
+                _isSettingETHPrice = true
+                Singletons.API.getValueOnCMC(forCMCId: "1027") { (jsonData) in
+                    self.valuesList["ETH"] = Value(source: .CoinMarketCap, jsonData: jsonData["data"]["quotes"]["EUR"])
+                    self._isSettingETHPrice = false
+                    handler()
+                }
+            } else {
+                NotificationCenter.default.addObserver(forName: NSNotification.Name.ETHPriceIsUpdate, object: nil, queue: nil) { (_) in
+                    handler()
+                }
             }
         }
     }
@@ -50,10 +64,6 @@ class ValuesManager {
 //    Récupérer la valeur d'un token
     func getValue(ofLink link:Link, handler:@escaping(Value?) -> Void ) {
         setETHPrice {
-            // Vérifier si la valeur est déja enregistré et si elle est récente
-//            if self.valuesList[link.tokenSymbol] != nil {
-//                print(" ETH price need reload : \(Date().timeIntervalSince(self.valuesList[link.tokenSymbol]!.lastUpdate).isLess(than: 60))")
-//            }
             if self.valuesList[link.tokenSymbol] == nil ||
                 !Date().timeIntervalSince(self.valuesList[link.tokenSymbol]!.lastUpdate).isLess(than: 60) {
                 // Récupérer le l'id Coin Market Cap

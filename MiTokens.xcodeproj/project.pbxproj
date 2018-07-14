@@ -31,6 +31,7 @@
 		DE5BF593209DAB9200EA5BF6 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5BF592209DAB9200EA5BF6 /* Raleway-Regular.ttf */; };
 		DE5BF596209DB4CA00EA5BF6 /* MiTokens_UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BF595209DB4CA00EA5BF6 /* MiTokens_UINavigationItem.swift */; };
 		DE5E721E20BABCA300CA80BA /* NewAirdrop_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5E721D20BABCA300CA80BA /* NewAirdrop_ViewController.swift */; };
+		DE64B8F220FA100B009CB418 /* Notification_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64B8F120FA100B009CB418 /* Notification_extension.swift */; };
 		DE825021209EDF6300084A23 /* GreyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE825020209EDF6300084A23 /* GreyView.swift */; };
 		DE825023209EF22000084A23 /* WhiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE825022209EF22000084A23 /* WhiteView.swift */; };
 		DE825025209EF2CE00084A23 /* MiTokens_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE825024209EF2CE00084A23 /* MiTokens_TextField.swift */; };
@@ -93,6 +94,7 @@
 		DE5BF592209DAB9200EA5BF6 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
 		DE5BF595209DB4CA00EA5BF6 /* MiTokens_UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiTokens_UINavigationItem.swift; sourceTree = "<group>"; };
 		DE5E721D20BABCA300CA80BA /* NewAirdrop_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAirdrop_ViewController.swift; sourceTree = "<group>"; };
+		DE64B8F120FA100B009CB418 /* Notification_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification_extension.swift; sourceTree = "<group>"; };
 		DE825020209EDF6300084A23 /* GreyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreyView.swift; sourceTree = "<group>"; };
 		DE825022209EF22000084A23 /* WhiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteView.swift; sourceTree = "<group>"; };
 		DE825024209EF2CE00084A23 /* MiTokens_TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiTokens_TextField.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				DEDD1D0B20B5FE8F0039FDD2 /* Double_extension.swift */,
 				DEBFE0F520C8613300801BE7 /* Date_Extension.swift */,
 				DE30AE8020CBD20500B9AA5A /* ViewController_extension.swift */,
+				DE64B8F120FA100B009CB418 /* Notification_extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -269,6 +272,8 @@
 				DEE4B16D20B73FE10005705F /* Structures.swift */,
 				DE82503A209F7A6A00084A23 /* Singletons_Model.swift */,
 				DE825034209F3F8C00084A23 /* APIManager_Model.swift */,
+				DE30AE8220CBD34700B9AA5A /* AdManager_Model.swift */,
+				DE52C69820D4F7ED0051B582 /* NotificationsManager.swift */,
 				DE82503C209F809600084A23 /* WalletsDatabase_Model.swift */,
 				DE825038209F58F500084A23 /* AirdropsDatabase_Model.swift */,
 				DE00CFF620BEEA40001F6C92 /* LinksDatabase_Model.swift */,
@@ -276,10 +281,8 @@
 				DE825036209F4EBE00084A23 /* Wallet_Model.swift */,
 				DEB2050C20A1AB660052D0E0 /* Airdrop_Model.swift */,
 				DE00CFF420BEE471001F6C92 /* Link_Model.swift */,
-				DEAB9E8920C45C87001EAD15 /* CMClinkForValue_model.swift */,
-				DE30AE8220CBD34700B9AA5A /* AdManager_Model.swift */,
-				DE52C69820D4F7ED0051B582 /* NotificationsManager.swift */,
 				DE3086FE20F11EB200F90DA5 /* Value_Model.swift */,
+				DEAB9E8920C45C87001EAD15 /* CMClinkForValue_model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				DE5BF596209DB4CA00EA5BF6 /* MiTokens_UINavigationItem.swift in Sources */,
 				DE08FA2020B35F53008E1C01 /* Wallets_ViewController.swift in Sources */,
 				DE825021209EDF6300084A23 /* GreyView.swift in Sources */,
+				DE64B8F220FA100B009CB418 /* Notification_extension.swift in Sources */,
 				DEDD1D0C20B5FE8F0039FDD2 /* Double_extension.swift in Sources */,
 				DE825025209EF2CE00084A23 /* MiTokens_TextField.swift in Sources */,
 				DED80D0F209E55CD001A0A90 /* Airdrop_CollectionViewCell.swift in Sources */,

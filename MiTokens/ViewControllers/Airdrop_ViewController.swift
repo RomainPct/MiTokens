@@ -138,41 +138,43 @@ class Airdrop_ViewController: TopBarAd_ViewController, UITextFieldDelegate {
                 """
                 
                 // Changement sur 1H
-                var diff1h = value.diff1h?.asAmount(withMaxDigits: 3)
-                if diff1h == nil {
+                var diff1h = "\(value.diff1h?.asAmount(withMaxDigits: 1) ?? "") %"
+                if diff1h == " %" {
                     diff1h = "inconnu"
-                } else if !diff1h!.contains("-") {
+                } else if !diff1h.contains("-") {
                     self.ui_thisHourArrow.image = UIImage(named: "Arrow Up")
-                    diff1h = "+\(diff1h!)"
+                    diff1h = "+\(diff1h) %"
                 }
                 // Changement sur 1 jour
-                var diff1d = value.diff1d?.asAmount(withMaxDigits: 3)
-                if diff1d == nil {
+//                var diff1d = value.diff1d?.asAmount(withMaxDigits: 1)
+                var diff1d = "\(value.diff1d?.asAmount(withMaxDigits: 1) ?? "") %"
+                if diff1d == " %" {
                     diff1d = "inconnu"
-                } else if !diff1d!.contains("-") {
+                } else if !diff1d.contains("-") {
                     self.ui_todayArrow.image = UIImage(named: "Arrow Up")
-                    diff1d = "+\(diff1d!)"
+                    diff1d = "+\(diff1d) %"
                 }
                 // Changement sur 1 semaine
-                var diff1w = value.diff1w?.asAmount(withMaxDigits: 3)
-                if diff1w == nil {
+//                var diff1w = value.diff1w?.asAmount(withMaxDigits: 1)
+                var diff1w = "\(value.diff1w?.asAmount(withMaxDigits: 1) ?? "") %"
+                if diff1w == " %" {
                   diff1w = "inconnu"
-                } else if !diff1w!.contains("-") {
+                } else if !diff1w.contains("-") {
                     self.ui_weekArrow.image = UIImage(named: "Arrow Up")
-                    diff1w = "+\(diff1w!)"
+                    diff1w = "+\(diff1w) %"
                 }
                 
                 // Affichage des valeurs
                 self.ui_thisHourLabel.text = """
-                \(diff1h!)%
+                \(diff1h)
                 cette heure-ci
                 """
                 self.ui_dayLabel.text = """
-                \(diff1d!)%
+                \(diff1d)
                 aujourd'hui
                 """
                 self.ui_weekLabel.text = """
-                \(diff1w!)%
+                \(diff1w)
                 cette semaine
                 """
                 

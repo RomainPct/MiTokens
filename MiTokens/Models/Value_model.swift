@@ -36,7 +36,7 @@ class Value {
         case .Idex:
             // Transformer le prix en euro
             diff1h = nil
-            diff1d = jsonData["percentChange"].double
+            diff1d = jsonData["percentChange"].doubleValue
             diff1w = nil
             price = jsonData["highestBid"].doubleValue * Singletons.Values.ETHPrice
         }

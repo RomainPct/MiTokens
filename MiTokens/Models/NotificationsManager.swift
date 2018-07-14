@@ -36,18 +36,19 @@ class NotificationManager {
         DispatchQueue.global(qos: .background).async {
             let notifTokenStr = (notifToken as NSData).description.replacingOccurrences(of: "[ <>]", with: "", options: .regularExpression, range: nil)
             if !notifTokenStr.isEmpty {
-                if self._keychain[self._KEY_notificationToken] != nil,
-                    notifTokenStr != self._keychain[self._KEY_notificationToken] {
+                if self.notificationToken != nil,
+                    notifTokenStr != self.notificationToken {
                     if Singletons.WalletsDB.wallets_list.count == 0 {
-                        // Supprimer tout ceux avec l'ancien tokens
+                        // Supprimer tout ceux avec l'ancien token
                         self.deleteAllData(forNotifToken: notifTokenStr)
                     } else {
                         // Changer le token dans la db
-                        self.updateNotifTokenInDB(forOldNotifToken: self._keychain[self._KEY_notificationToken]!, withNewNotifToken: notifTokenStr)
+                        self.updateNotifTokenInDB(forOldNotifToken: self.notificationToken!, withNewNotifToken: notifTokenStr)
                     }
                 }
-                // Enregistrer dans _keychain["notificationToken"]
+                // Enregistrer dans _keychain[_KEY_notificationToken]
                 self._keychain[self._KEY_notificationToken] = notifTokenStr
+                NotificationCenter.default.post(name: NSNotification.Name.NotificationTokenReceived, object: nil)
             }
         }
     }
@@ -94,19 +95,34 @@ class NotificationManager {
     }
     
 //    Token Received Notifications
+    fileprivate func executeturnOnTokenReceivedNotification(_ handler: () -> Void) {
+        _keychain[_KEY_tokendReceived] = true.description
+        for wallet in Singletons.WalletsDB.wallets_list {
+            self.newWalletForNotification(wallet)
+        }
+        handler()
+    }
+    
     func turnOnTokenReceivedNotification(handler:@escaping ()->Void){
-        DispatchQueue.global(qos: .background).async {
-            while self.notificationToken == nil {
-                sleep(1)
-            }
-            self._keychain[self._KEY_tokendReceived] = true.description
-            DispatchQueue.main.sync {
-                for wallet in Singletons.WalletsDB.wallets_list {
-                    self.newWalletForNotification(wallet)
-                }
-                handler()
+        if notificationToken != nil {
+            executeturnOnTokenReceivedNotification(handler)
+        } else {
+            NotificationCenter.default.addObserver(forName: NSNotification.Name.NotificationTokenReceived, object: nil, queue: nil) { (_) in
+                self.executeturnOnTokenReceivedNotification(handler)
             }
         }
+//        DispatchQueue.global(qos: .background).async {
+//            while self.notificationToken == nil {
+//                sleep(1)
+//            }
+//            self._keychain[self._KEY_tokendReceived] = true.description
+//            DispatchQueue.main.sync {
+//                for wallet in Singletons.WalletsDB.wallets_list {
+//                    self.newWalletForNotification(wallet)
+//                }
+//                handler()
+//            }
+//        }
     }
     func turnOffTokenReceivedNotification(){
         self._keychain[self._KEY_tokendReceived] = false.description
@@ -138,20 +154,32 @@ class NotificationManager {
     }
     
 // Token Listed Notification
+    fileprivate func executeTurnOnTokenListedNotification(_ handler: () -> Void) {
+        _keychain[_KEY_tokenListed] = true.description
+        for wallet in Singletons.WalletsDB.wallets_list {
+            // En mettant a jour les wallets, les tokens s'enregistrent automatiquement dans la db
+            wallet.updateBalances(forcing: true, handler: {})
+        }
+        handler()
+    }
+    
     func turnOnTokenListedNotification(handler:@escaping ()->Void){
-        DispatchQueue.global(qos: .background).async {
-            while self.notificationToken == nil {
-                sleep(1)
-            }
-            self._keychain[self._KEY_tokenListed] = true.description
-            DispatchQueue.main.async {
-                for wallet in Singletons.WalletsDB.wallets_list {
-                    // En mettant a jour les wallets, les tokens s'enregistrent automatiquement dans la db
-                    wallet.updateBalances(forcing: true, handler: {})
-                }
-                handler()
+        if notificationToken != nil {
+            executeTurnOnTokenListedNotification(handler)
+        } else {
+            NotificationCenter.default.addObserver(forName: NSNotification.Name.NotificationTokenReceived, object: nil, queue: nil) { (_) in
+                self.executeTurnOnTokenListedNotification(handler)
             }
         }
+//        DispatchQueue.global(qos: .background).async {
+//            while self.notificationToken == nil {
+//                sleep(1)
+//            }
+//            self._keychain[self._KEY_tokenListed] = true.description
+//            DispatchQueue.main.async {
+//                executeTurnOnTokenListedNotification()
+//            }
+//        }
     }
     func turnOffTokenListedNotification(handler:@escaping ()->Void){
         DispatchQueue.global(qos: .background).async {
