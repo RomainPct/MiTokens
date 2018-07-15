@@ -108,21 +108,11 @@ class NotificationManager {
             executeturnOnTokenReceivedNotification(handler)
         } else {
             NotificationCenter.default.addObserver(forName: NSNotification.Name.NotificationTokenReceived, object: nil, queue: nil) { (_) in
-                self.executeturnOnTokenReceivedNotification(handler)
+                DispatchQueue.main.async {
+                    self.executeturnOnTokenReceivedNotification(handler)
+                }
             }
         }
-//        DispatchQueue.global(qos: .background).async {
-//            while self.notificationToken == nil {
-//                sleep(1)
-//            }
-//            self._keychain[self._KEY_tokendReceived] = true.description
-//            DispatchQueue.main.sync {
-//                for wallet in Singletons.WalletsDB.wallets_list {
-//                    self.newWalletForNotification(wallet)
-//                }
-//                handler()
-//            }
-//        }
     }
     func turnOffTokenReceivedNotification(){
         self._keychain[self._KEY_tokendReceived] = false.description
@@ -168,18 +158,11 @@ class NotificationManager {
             executeTurnOnTokenListedNotification(handler)
         } else {
             NotificationCenter.default.addObserver(forName: NSNotification.Name.NotificationTokenReceived, object: nil, queue: nil) { (_) in
-                self.executeTurnOnTokenListedNotification(handler)
+                DispatchQueue.main.async {
+                    self.executeTurnOnTokenListedNotification(handler)
+                }
             }
         }
-//        DispatchQueue.global(qos: .background).async {
-//            while self.notificationToken == nil {
-//                sleep(1)
-//            }
-//            self._keychain[self._KEY_tokenListed] = true.description
-//            DispatchQueue.main.async {
-//                executeTurnOnTokenListedNotification()
-//            }
-//        }
     }
     func turnOffTokenListedNotification(handler:@escaping ()->Void){
         DispatchQueue.global(qos: .background).async {
