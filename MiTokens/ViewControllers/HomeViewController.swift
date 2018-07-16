@@ -76,15 +76,19 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         cell.bounds.size = cellSize
         let airdrop = _AirdropsList[indexPath.row]
         cell.ui_nameLabel.text = airdrop.name
+        cell.ui_tokensLabel.text = "\(airdrop.totalAmount) \(airdrop.symbol!)"
         airdrop.getValue { (value) in
-            if value != nil {
-                let totalValue = value!.getTotalValue(forAmount: (airdrop.totalAmount.amountToDouble() ?? 0))
-                cell.ui_priceLabel.text = "Valeur : \(totalValue.asAmount(withMaxDigits: 2)) €"
-            } else {
-                cell.ui_priceLabel.text = ""
+            // Vérifier que l'airdrop en question est toujours celui à cette case
+            if let cellName = cell.ui_nameLabel.text,
+                cellName == airdrop.name {
+                if value != nil {
+                    let totalValue = value!.getTotalValue(forAmount: (airdrop.totalAmount.amountToDouble() ?? 0))
+                    cell.ui_priceLabel.text = "Valeur : \(totalValue.asAmount(withDigits: 2)) €"
+                } else {
+                    cell.ui_priceLabel.text = ""
+                }
             }
         }
-        cell.ui_tokensLabel.text = "\(airdrop.totalAmount) \(airdrop.symbol!)"
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
