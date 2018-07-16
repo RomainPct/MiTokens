@@ -23,7 +23,7 @@ class Profil_ViewController: UIViewController, UIApplicationDelegate {
         super.viewDidLoad()
         setStats()
     }
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillLayoutSubviews() {
         setNotifications()
     }
     
@@ -37,8 +37,6 @@ class Profil_ViewController: UIViewController, UIApplicationDelegate {
         """
     }
     fileprivate func setNotifications(){
-        print("Tokens received : \(notifManager.TokensReceivedNotification)")
-        print("Tokens listed : \(notifManager.TokenListedNotification)")
         // Arreter les animations
         ui_tokensReceivedNotification.stopChangingStateAnimation()
         ui_tokensListedNotification.stopChangingStateAnimation()

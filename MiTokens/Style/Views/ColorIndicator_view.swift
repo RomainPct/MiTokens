@@ -10,7 +10,6 @@ import UIKit
 
 class ColorIndicator_view: UIView {
     
-//    var stopAnim:Bool = false
     var isAnimate:Bool = false
     
     override func awakeFromNib() {

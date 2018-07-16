@@ -76,7 +76,6 @@ class NewAirdrop_ViewController: TopBarAd_ViewController, UITextFieldDelegate {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("Prepare segue : \(segue)")
         if wasEdited,
             let nextVC = segue.destination as? HomeViewController {
             nextVC._needReload = true

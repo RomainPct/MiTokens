@@ -1,0 +1,237 @@
+
+/* Class = "UIButton"; normalTitle = "Associer à un airdrop"; ObjectID = "0GC-jQ-ZZm"; */
+"0GC-jQ-ZZm.normalTitle" = "Associer à un airdrop";
+
+/* Class = "UINavigationItem"; title = "Profil"; ObjectID = "2K0-yt-uHt"; */
+"2K0-yt-uHt.title" = "Profil";
+
+/* Class = "UITextField"; placeholder = "Quantité de tokens"; ObjectID = "3L7-Y2-WmK"; */
+"3L7-Y2-WmK.placeholder" = "Quantité de tokens";
+
+/* Class = "UILabel"; text = "Airdrops réalisés : 67\nAirdrops reçus : 23\nAirdrops vendus : 6\n\nValeur totale estimée : 217€"; ObjectID = "49x-DI-YTE"; */
+"49x-DI-YTE.text" = "Airdrops réalisés : 67\nAirdrops reçus : 23\nAirdrops vendus : 6\n\nValeur totale estimée : 217€";
+
+/* Class = "UILabel"; text = "J'ai vendu"; ObjectID = "4Ma-Zt-Gwp"; */
+"4Ma-Zt-Gwp.text" = "J'ai vendu";
+
+/* Class = "UILabel"; text = "Vendus"; ObjectID = "5ey-ek-Dlu"; */
+"5ey-ek-Dlu.text" = "Vendus";
+
+/* Class = "UILabel"; text = "En attente"; ObjectID = "5g6-lb-kBh"; */
+"5g6-lb-kBh.text" = "En attente";
+
+/* Class = "UILabel"; text = "555 ETH"; ObjectID = "7nA-08-Hoj"; */
+"7nA-08-Hoj.text" = "555 ETH";
+
+/* Class = "UIButton"; normalTitle = "Modifier"; ObjectID = "7oW-6m-Pa4"; */
+"7oW-6m-Pa4.normalTitle" = "Modifier";
+
+/* Class = "UILabel"; text = "Valeur"; ObjectID = "9cb-HP-adI"; */
+"9cb-HP-adI.text" = "Valeur";
+
+/* Class = "UITextField"; placeholder = "Quantité"; ObjectID = "9uW-ie-IJ3"; */
+"9uW-ie-IJ3.placeholder" = "Quantité";
+
+/* Class = "UILabel"; text = "tokens"; ObjectID = "CHY-92-qeH"; */
+"CHY-92-qeH.text" = "tokens";
+
+/* Class = "UINavigationItem"; title = "Mes Wallets"; ObjectID = "Enf-oe-g0Q"; */
+"Enf-oe-g0Q.title" = "Mes Wallets";
+
+/* Class = "UINavigationItem"; title = "MiTokens"; ObjectID = "F3L-yJ-dX5"; */
+"F3L-yJ-dX5.title" = "MiTokens";
+
+/* Class = "UITabBarItem"; title = "Profil"; ObjectID = "Fof-T0-Kse"; */
+"Fof-T0-Kse.title" = "Profil";
+
+/* Class = "UITextField"; placeholder = "Clé publique ERC20"; ObjectID = "Fw6-jV-O06"; */
+"Fw6-jV-O06.placeholder" = "Clé publique ERC20";
+
+/* Class = "UILabel"; text = "Reçu"; ObjectID = "Hha-Ph-c8A"; */
+"Hha-Ph-c8A.text" = "Reçu";
+
+/* Class = "UILabel"; text = "[...]"; ObjectID = "HrR-uO-QZ0"; */
+"HrR-uO-QZ0.text" = "[...]";
+
+/* Class = "UILabel"; text = "Nombre tokens"; ObjectID = "JTo-44-KVy"; */
+"JTo-44-KVy.text" = "Nombre tokens";
+
+/* Class = "UILabel"; text = "Bienvenue sur MiTokens !"; ObjectID = "Jx9-AZ-iOW"; */
+"Jx9-AZ-iOW.text" = "Bienvenue sur MiTokens !";
+
+/* Class = "UILabel"; text = "réalisé le 04/04/2018\nAdresse du smart contract :\n0xhsuiceydgfyudivyishv"; ObjectID = "LGK-7B-RqJ"; */
+"LGK-7B-RqJ.text" = "réalisé le 04/04/2018\nAdresse du smart contract :\n0xhsuiceydgfyudivyishv";
+
+/* Class = "UITextField"; placeholder = "Quantité referral (optionnel)"; ObjectID = "PEK-0M-0wf"; */
+"PEK-0M-0wf.placeholder" = "Quantité referral (optionnel)";
+
+/* Class = "UIButton"; normalTitle = "Ajouter un wallet"; ObjectID = "Pth-oa-bIG"; */
+"Pth-oa-bIG.normalTitle" = "Ajouter un wallet";
+
+/* Class = "UILabel"; text = "€"; ObjectID = "RTH-xI-TDL"; */
+"RTH-xI-TDL.text" = "€";
+
+/* Class = "UITextField"; placeholder = "Symbol"; ObjectID = "SBp-Zp-3No"; */
+"SBp-Zp-3No.placeholder" = "Symbol";
+
+/* Class = "UIButton"; normalTitle = "Ajouter ce wallet"; ObjectID = "SIH-gM-R4d"; */
+"SIH-gM-R4d.normalTitle" = "Ajouter ce wallet";
+
+/* Class = "UILabel"; text = "Ce token n'est listé sur aucune plateforme pour le moment."; ObjectID = "TLy-Lv-wEH"; */
+"TLy-Lv-wEH.text" = "Ce token n'est listé sur aucune plateforme pour le moment.";
+
+/* Class = "UILabel"; text = "Texte pour expliquer les avantages et la sécurité de l'ajout d'un wallet. Fusce ipsum leo, tincidunt non risus posuere, sodales dignissim eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In rutrum lectus in dapibus facilisis."; ObjectID = "TPk-RY-gTT"; */
+"TPk-RY-gTT.text" = "Texte pour expliquer les avantages et la sécurité de l'ajout d'un wallet. Fusce ipsum leo, tincidunt non risus posuere, sodales dignissim eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In rutrum lectus in dapibus facilisis.";
+
+/* Class = "UILabel"; text = "Vos wallets"; ObjectID = "Tdh-Uw-vUv"; */
+"Tdh-Uw-vUv.text" = "Vos wallets";
+
+/* Class = "UILabel"; text = "Stats"; ObjectID = "VhJ-tk-u1a"; */
+"VhJ-tk-u1a.text" = "Stats";
+
+/* Class = "UILabel"; text = "Pour utiliser MiTokens au mieux, vous pouvez ajouter votre wallet ethereum dans l'application via la section \"Wallets\".\nDécouvrez également la section \"Profil\", dans laquelle vous pouvez vous abonner aux notifications mais également suivre vos statistiques.\nDésormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens via le bouton présent au bas de votre écran !"; ObjectID = "W6q-ET-DAp"; */
+"W6q-ET-DAp.text" = "Pour utiliser MiTokens au mieux, vous pouvez ajouter votre wallet ethereum dans l'application via la section \"Wallets\".\nDécouvrez également la section \"Profil\", dans laquelle vous pouvez vous abonner aux notifications mais également suivre vos statistiques.\nDésormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens via le bouton présent au bas de votre écran !";
+
+/* Class = "UILabel"; text = "Listé sur plateforme"; ObjectID = "WcX-gG-ZFJ"; */
+"WcX-gG-ZFJ.text" = "Listé sur plateforme";
+
+/* Class = "UILabel"; text = "État de l'airdrop"; ObjectID = "XbC-q2-GuW"; */
+"XbC-q2-GuW.text" = "État de l'airdrop";
+
+/* Class = "UILabel"; text = "+2,5% aujourd'hui"; ObjectID = "YFP-Xj-ycJ"; */
+"YFP-Xj-ycJ.text" = "+2,5% aujourd'hui";
+
+/* Class = "UIButton"; normalTitle = "Ajouter un Airdrop"; ObjectID = "YIv-s9-IZh"; */
+"YIv-s9-IZh.normalTitle" = "Ajouter un Airdrop";
+
+/* Class = "UILabel"; text = "+3,2% ce mois-ci"; ObjectID = "YYY-V9-AcA"; */
+"YYY-V9-AcA.text" = "+3,2% ce mois-ci";
+
+/* Class = "UILabel"; text = "associé à Silent Notary Token"; ObjectID = "Zcx-t7-b3G"; */
+"Zcx-t7-b3G.text" = "associé à Silent Notary Token";
+
+/* Class = "UITextField"; placeholder = "Quantité referral (optionnel)"; ObjectID = "ZeF-wx-G8g"; */
+"ZeF-wx-G8g.placeholder" = "Quantité referral (optionnel)";
+
+/* Class = "UIButton"; normalTitle = "Enregistrer la vente"; ObjectID = "aLf-y6-5JG"; */
+"aLf-y6-5JG.normalTitle" = "Enregistrer la vente";
+
+/* Class = "UILabel"; text = "Enregistrer une vente"; ObjectID = "awC-57-PCk"; */
+"awC-57-PCk.text" = "Enregistrer une vente";
+
+/* Class = "UILabel"; text = "Airdrop"; ObjectID = "bDw-xZ-99y"; */
+"bDw-xZ-99y.text" = "Airdrop";
+
+/* Class = "UILabel"; text = "Airdrop name"; ObjectID = "buM-ep-Geg"; */
+"buM-ep-Geg.text" = "Airdrop name";
+
+/* Class = "UILabel"; text = "Quantités"; ObjectID = "c20-Tr-BPu"; */
+"c20-Tr-BPu.text" = "Quantités";
+
+/* Class = "UIButton"; normalTitle = "J'ai vendu des"; ObjectID = "cyV-oJ-SRh"; */
+"cyV-oJ-SRh.normalTitle" = "J'ai vendu des";
+
+/* Class = "UIButton"; normalTitle = "Stats"; ObjectID = "d0B-pA-C4X"; */
+"d0B-pA-C4X.normalTitle" = "Stats";
+
+/* Class = "UITextField"; placeholder = "Nom de l'airdrop"; ObjectID = "d5w-jM-p9N"; */
+"d5w-jM-p9N.placeholder" = "Nom de l'airdrop";
+
+/* Class = "UILabel"; text = "Lorsque des tokens arrivent sur votre wallet"; ObjectID = "dPt-g6-XNL"; */
+"dPt-g6-XNL.text" = "Lorsque des tokens arrivent sur votre wallet";
+
+/* Class = "UILabel"; text = "Pour une valeur de "; ObjectID = "eui-KD-mgp"; */
+"eui-KD-mgp.text" = "Pour une valeur de ";
+
+/* Class = "UILabel"; text = "Lorsqu'un token est listé sur une place de marché"; ObjectID = "f2k-fc-9zf"; */
+"f2k-fc-9zf.text" = "Lorsqu'un token est listé sur une place de marché";
+
+/* Class = "UITabBarItem"; title = "Mes wallets"; ObjectID = "gp7-cb-Jbb"; */
+"gp7-cb-Jbb.title" = "Mes wallets";
+
+/* Class = "UIButton"; normalTitle = "Supprimer ce wallet"; ObjectID = "hMD-gB-556"; */
+"hMD-gB-556.normalTitle" = "Supprimer ce wallet";
+
+/* Class = "UINavigationItem"; title = "Profil"; ObjectID = "hOh-nO-K5v"; */
+"hOh-nO-K5v.title" = "Profil";
+
+/* Class = "UILabel"; text = "Airdrop name"; ObjectID = "ha6-hj-fv6"; */
+"ha6-hj-fv6.text" = "Airdrop name";
+
+/* Class = "UITextField"; placeholder = "Nom du wallet"; ObjectID = "hx9-89-aYZ"; */
+"hx9-89-aYZ.placeholder" = "Nom du wallet";
+
+/* Class = "UISearchBar"; placeholder = "Rechercher un airdrop"; ObjectID = "itO-XA-xn0"; */
+"itO-XA-xn0.placeholder" = "Rechercher un airdrop";
+
+/* Class = "UISearchBar"; itO-XA-xn0.scopeButtonTitles[0] = "Title"; ObjectID = "itO-XA-xn0"; */
+"itO-XA-xn0.scopeButtonTitles[0]" = "Title";
+
+/* Class = "UISearchBar"; itO-XA-xn0.scopeButtonTitles[1] = "Title"; ObjectID = "itO-XA-xn0"; */
+"itO-XA-xn0.scopeButtonTitles[1]" = "Title";
+
+/* Class = "UILabel"; text = "En attente"; ObjectID = "j1B-lc-vk8"; */
+"j1B-lc-vk8.text" = "En attente";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "nvb-Yo-zho"; */
+"nvb-Yo-zho.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Je n'ai pas reçu ce airdrop"; ObjectID = "oc7-xh-gE0"; */
+"oc7-xh-gE0.normalTitle" = "Je n'ai pas reçu ce airdrop";
+
+/* Class = "UILabel"; text = "Reçus"; ObjectID = "q64-ez-Tuh"; */
+"q64-ez-Tuh.text" = "Reçus";
+
+/* Class = "UILabel"; text = "Ajouter un airdrop"; ObjectID = "qIF-yy-0vZ"; */
+"qIF-yy-0vZ.text" = "Ajouter un airdrop";
+
+/* Class = "UIButton"; normalTitle = "Wallets"; ObjectID = "qKc-ly-M7K"; */
+"qKc-ly-M7K.normalTitle" = "Wallets";
+
+/* Class = "UITabBarItem"; title = "Mes airdrops"; ObjectID = "rrK-wT-b6v"; */
+"rrK-wT-b6v.title" = "Mes airdrops";
+
+/* Class = "UIButton"; normalTitle = "Supprimer"; ObjectID = "rtT-vq-JeK"; */
+"rtT-vq-JeK.normalTitle" = "Supprimer";
+
+/* Class = "UILabel"; text = "[...]"; ObjectID = "t7N-me-zp6"; */
+"t7N-me-zp6.text" = "[...]";
+
+/* Class = "UIButton"; normalTitle = "Ajouter ce airdrop"; ObjectID = "tLh-7O-bsk"; */
+"tLh-7O-bsk.normalTitle" = "Ajouter ce airdrop";
+
+/* Class = "UILabel"; text = "-1,07% cette semaine"; ObjectID = "tdw-Rr-hum"; */
+"tdw-Rr-hum.text" = "-1,07% cette semaine";
+
+/* Class = "UILabel"; text = "Nombre tokens"; ObjectID = "u9A-tl-XPd"; */
+"u9A-tl-XPd.text" = "Nombre tokens";
+
+/* Class = "UILabel"; text = "Vendu"; ObjectID = "uHO-Lt-fav"; */
+"uHO-Lt-fav.text" = "Vendu";
+
+/* Class = "UILabel"; text = "De quel airdrop proviennent ces tokens ?"; ObjectID = "vEh-EW-c6G"; */
+"vEh-EW-c6G.text" = "De quel airdrop proviennent ces tokens ?";
+
+/* Class = "UILabel"; text = "555 ETH"; ObjectID = "vOp-dr-MLk"; */
+"vOp-dr-MLk.text" = "555 ETH";
+
+/* Class = "UINavigationItem"; title = "MiTokens"; ObjectID = "wMv-06-mFe"; */
+"wMv-06-mFe.title" = "MiTokens";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xIG-6L-Lkp"; */
+"xIG-6L-Lkp.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Modifier"; ObjectID = "xz3-2p-f7z"; */
+"xz3-2p-f7z.text" = "Modifier";
+
+/* Class = "UILabel"; text = "FRESCO [2000FRES]"; ObjectID = "yJx-uh-PDU"; */
+"yJx-uh-PDU.text" = "FRESCO [2000FRES]";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "yjU-Hm-RgT"; */
+"yjU-Hm-RgT.text" = "Notifications";
+
+/* Class = "UILabel"; text = "Ajouter un wallet"; ObjectID = "z2t-rb-3Ra"; */
+"z2t-rb-3Ra.text" = "Ajouter un wallet";
+
+/* Class = "UILabel"; text = "Vous avez xxx Tokens"; ObjectID = "zti-Oq-grE"; */
+"zti-Oq-grE.text" = "Vous avez xxx Tokens";

@@ -21,7 +21,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="sYH-Tz-vme">
             <objects>
-                <tabBarController id="Mo6-Dr-ipw" sceneMemberID="viewController">
+                <tabBarController modalTransitionStyle="crossDissolve" id="Mo6-Dr-ipw" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UHN-7I-BFa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -40,7 +40,7 @@
         <!--MiTokens-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MiTokens" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="HomeViewController" customModule="MiTokens" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,7 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DS0-Xv-ald">
-                                                            <rect key="frame" x="16" y="20.333333333333332" width="147" height="40.666666666666671"/>
+                                                            <rect key="frame" x="16" y="20.666666666666668" width="147" height="40.333333333333329"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airdrop name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha6-hj-fv6" customClass="Subtitle_label" customModule="MiTokens" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="147" height="20.333333333333332"/>
@@ -82,13 +82,13 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre tokens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTo-44-KVy" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="20.333333333333336" width="147" height="20.333333333333336"/>
+                                                                    <rect key="frame" x="0.0" y="20.333333333333332" width="147" height="19.999999999999996"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" name="Text_Black70"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tr-V4-2nw" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="40.666666666666671" width="147" height="0.0"/>
+                                                                    <rect key="frame" x="0.0" y="40.333333333333329" width="147" height="0.0"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" name="Text_Black70"/>
                                                                     <nil key="highlightedColor"/>
@@ -164,7 +164,7 @@
                                 <rect key="frame" x="13" y="173" width="349" height="26"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MmZ-GQ-3XY">
-                                        <rect key="frame" x="0.0" y="0.0" width="102.33333333333333" height="26"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="26"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtS-7a-KAx" customClass="KGRadioButton" customModule="MiTokens" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="5" width="13" height="13"/>
@@ -186,7 +186,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En attente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1B-lc-vk8" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="3.3333333333333428" width="86.333333333333329" height="20.333333333333332"/>
+                                                <rect key="frame" x="16" y="3.6666666666666572" width="86.666666666666671" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -206,7 +206,7 @@
                                         </connections>
                                     </view>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbe-Vg-7Xg">
-                                        <rect key="frame" x="123.33333333333334" y="0.0" width="102.33333333333334" height="26"/>
+                                        <rect key="frame" x="123.66666666666666" y="0.0" width="102" height="26"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pa-de-Vzr" customClass="KGRadioButton" customModule="MiTokens" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="5" width="13" height="13"/>
@@ -228,7 +228,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reçus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q64-ez-Tuh" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="3.3333333333333428" width="86.333333333333329" height="20.333333333333332"/>
+                                                <rect key="frame" x="16" y="3.6666666666666572" width="86" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -271,7 +271,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vendus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ey-ek-Dlu" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="3.3333333333333428" width="86.333333333333329" height="20.333333333333332"/>
+                                                <rect key="frame" x="16" y="3.6666666666666572" width="86.333333333333329" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -362,19 +362,17 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                             <outletCollection property="gestureRecognizers" destination="7y2-9l-97X" appends="YES" id="ww2-78-qsX"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mes airdrops" image="Airdrops" selectedImage="Arrow Up" id="rrK-wT-b6v">
-                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Mes airdrops" image="Airdrops" selectedImage="Airdrops Focus" id="rrK-wT-b6v"/>
                     <navigationItem key="navigationItem" title="MiTokens" id="F3L-yJ-dX5" customClass="MiTokens_UINavigationItem" customModule="MiTokens" customModuleProvider="target">
                         <barButtonItem key="backBarButtonItem" title=" " id="nvb-Yo-zho"/>
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="rEC-FF-ojt">
+                        <barButtonItem key="leftBarButtonItem" id="rEC-FF-ojt">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d0B-pA-C4X" customClass="NavBar_button" customModule="MiTokens" customModuleProvider="target">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Stats"/>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="u5D-br-YWL">
+                        <barButtonItem key="rightBarButtonItem" id="u5D-br-YWL">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qKc-ly-M7K" customClass="NavBar_button" customModule="MiTokens" customModuleProvider="target">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -420,7 +418,7 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
         <!--Mes wallets-->
         <scene sceneID="ZQJ-1Q-IBH">
             <objects>
-                <viewController id="LYg-t9-wC5" customClass="Wallets_ViewController" customModule="MiTokens" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="LYg-t9-wC5" customClass="Wallets_ViewController" customModule="MiTokens" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wg3-Bw-xVa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -432,11 +430,11 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKb-Ym-f3R">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Mes Wallets" id="Enf-oe-g0Q" customClass="MiTokens_UINavigationItem" customModule="MiTokens" customModuleProvider="target"/>
+                                    <navigationItem title="MiTokens" id="Enf-oe-g0Q" customClass="MiTokens_UINavigationItem" customModule="MiTokens" customModuleProvider="target"/>
                                 </items>
                             </navigationBar>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m21-xG-ktV">
-                                <rect key="frame" x="0.0" y="88.000000000000014" width="375" height="248.33333333333337"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="288.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vos wallets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdh-Uw-vUv" customClass="Subtitle_label" customModule="MiTokens" customModuleProvider="target">
                                         <rect key="frame" x="13" y="21" width="86" height="21"/>
@@ -445,14 +443,14 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPk-RY-gTT" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                        <rect key="frame" x="13" y="50" width="349" height="142.33333333333334"/>
-                                        <string key="text">Texte pour expliquer les avantages et la sécurité de l'ajout d'un wallet. Fusce ipsum leo, tincidunt non risus posuere, sodales dignissim eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In rutrum lectus in dapibus facilisis.</string>
+                                        <rect key="frame" x="13" y="49.999999999999986" width="349" height="182.66666666666663"/>
+                                        <string key="text">En ajoutant votre wallet dans MiTokens, vous pourrez suivre son contenu mais également sa valeur. De plus, vous pourrez désormais recevoir des notifications lorsque vous recevrez un token mais aussi lorsque l'un de vos tokens sera listé sur une plateforme d'échange. Enfin, ceci est totalement sécurisé car nous avons seulement besoin de votre clé publique pour lire ces données.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pth-oa-bIG" customClass="MiTokens_button" customModule="MiTokens" customModuleProvider="target">
-                                        <rect key="frame" x="130.66666666666666" y="205.33333333333331" width="115" height="30"/>
+                                        <rect key="frame" x="130.66666666666666" y="245.66666666666669" width="115" height="30"/>
                                         <state key="normal" title="Ajouter un wallet"/>
                                         <connections>
                                             <segue destination="JMM-6H-SkF" kind="presentation" identifier="showAddWalletForm" modalPresentationStyle="overCurrentContext" id="m0O-Wj-QNy"/>
@@ -472,10 +470,10 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOp-ia-3JQ">
-                                <rect key="frame" x="0.0" y="336.33333333333326" width="375" height="475.66666666666674"/>
+                                <rect key="frame" x="0.0" y="376.66666666666674" width="375" height="435.33333333333326"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" estimatedRowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZzM-YB-g3u">
-                                        <rect key="frame" x="0.0" y="66.666666666666686" width="375" height="409"/>
+                                        <rect key="frame" x="0.0" y="66.666666666666629" width="375" height="368.66666666666669"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <prototypes>
@@ -496,13 +494,13 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[...]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7N-me-zp6" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                                                    <rect key="frame" x="105" y="2" width="26.333333333333343" height="21"/>
+                                                                    <rect key="frame" x="105" y="2" width="26.666666666666657" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="251" horizontalCompressionResistancePriority="300" text="associé à Silent Notary Token" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcx-t7-b3G" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                                                    <rect key="frame" x="144.33333333333337" y="7" width="217.66666666666663" height="22"/>
+                                                                    <rect key="frame" x="144.66666666666663" y="7" width="217.33333333333337" height="22"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" name="Text_Black70"/>
                                                                     <nil key="highlightedColor"/>
@@ -701,10 +699,7 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eTq-Lj-6mT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mes wallets" image="Wallets" selectedImage="Arrow Up" id="gp7-cb-Jbb">
-                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Mes wallets" image="Wallets" selectedImage="Wallets Focus" id="gp7-cb-Jbb"/>
                     <connections>
                         <outlet property="ui_noWalletInformationsView" destination="m21-xG-ktV" id="X8z-mw-Lpv"/>
                         <outlet property="ui_numberOfTokensLabel" destination="51v-xY-gDz" id="z7n-h3-8ld"/>
@@ -737,7 +732,7 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="05l-2K-Cqs" customClass="WhiteView" customModule="MiTokens" customModuleProvider="target">
-                                <rect key="frame" x="13" y="183.00000000000003" width="349" height="446.66666666666674"/>
+                                <rect key="frame" x="13" y="182.66666666666666" width="349" height="446.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous avez xxx Tokens" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zti-Oq-grE" customClass="Subtitle_label" customModule="MiTokens" customModuleProvider="target">
                                         <rect key="frame" x="8" y="12.999999999999998" width="333" height="20.333333333333329"/>
@@ -752,7 +747,7 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2lg-vG-kIS">
-                                        <rect key="frame" x="0.0" y="66.666666666666629" width="349" height="380"/>
+                                        <rect key="frame" x="0.0" y="66.666666666666686" width="349" height="380"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="380" id="9Lu-Lt-gcb"/>
@@ -908,7 +903,7 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3m-Te-hhB" customClass="GreyView" customModule="MiTokens" customModuleProvider="target">
-                                <rect key="frame" x="13" y="323.33333333333331" width="349" height="166"/>
+                                <rect key="frame" x="13" y="323" width="349" height="166"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajouter un wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2t-rb-3Ra" customClass="Subtitle_label" customModule="MiTokens" customModuleProvider="target">
                                         <rect key="frame" x="13" y="13" width="279" height="21"/>
@@ -1044,7 +1039,7 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantité referral (optionnel)" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PEK-0M-0wf" customClass="MiTokens_TextField" customModule="MiTokens" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantité referral (optionnel)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PEK-0M-0wf" customClass="MiTokens_TextField" customModule="MiTokens" customModuleProvider="target">
                                         <rect key="frame" x="16" y="133" width="153.66666666666666" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -1130,28 +1125,28 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                                 <rect key="frame" x="0.0" y="-6" width="375.33333333333326" height="812"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8p-LT-wHX" customClass="WhiteView" customModule="MiTokens" customModuleProvider="target">
-                                        <rect key="frame" x="14" y="183.99999999999997" width="349" height="444.33333333333326"/>
+                                        <rect key="frame" x="13" y="184.33333333333334" width="349.33333333333331" height="443.33333333333326"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3l-Qn-0A3" customClass="ColorIndicator_view" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="8.3333333333333339" height="444.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="8.6666666666666661" height="443.33333333333331"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="8" id="opO-jU-CzC"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airdrop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDw-xZ-99y" customClass="Subtitle_label" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="21.333333333333332" y="12.999999999999998" width="56.333333333333343" height="20.333333333333329"/>
+                                                <rect key="frame" x="21.666666666666661" y="12.999999999999998" width="56.333333333333343" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FRESCO [2000FRES]" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJx-uh-PDU" customClass="Important_label" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="21.333333333333343" y="38.333333333333343" width="315" height="20.333333333333329"/>
+                                                <rect key="frame" x="21.666666666666657" y="38.333333333333314" width="315.33333333333337" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGK-7B-RqJ" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="21.333333333333343" y="61.666666666666657" width="315" height="61"/>
+                                                <rect key="frame" x="21.666666666666657" y="61.666666666666657" width="315.33333333333337" height="61"/>
                                                 <string key="text">réalisé le 04/04/2018
 Adresse du smart contract :
 0xhsuiceydgfyudivyishv</string>
@@ -1160,7 +1155,7 @@ Adresse du smart contract :
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdB-pX-ZQk">
-                                                <rect key="frame" x="8.3333333333333428" y="135.66666666666669" width="340.66666666666663" height="214.33333333333331"/>
+                                                <rect key="frame" x="8.6666666666666572" y="135.66666666666663" width="340.66666666666674" height="214.33333333333337"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjy-40-lKw">
                                                         <rect key="frame" x="20" y="0.0" width="300.66666666666669" height="1"/>
@@ -1170,7 +1165,7 @@ Adresse du smart contract :
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valeur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cb-HP-adI" customClass="Subtitle_label" customModule="MiTokens" customModuleProvider="target">
-                                                        <rect key="frame" x="13.000000000000004" y="13.999999999999998" width="48.333333333333343" height="20.333333333333329"/>
+                                                        <rect key="frame" x="12.999999999999996" y="13.999999999999998" width="48.333333333333329" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1203,16 +1198,16 @@ Adresse du smart contract :
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m82-85-TRA" customClass="GreyView" customModule="MiTokens" customModuleProvider="target">
-                                                                <rect key="frame" x="13" y="28.333333333333321" width="96" height="79.666666666666686"/>
+                                                                <rect key="frame" x="12.999999999999993" y="28.333333333333378" width="95.666666666666657" height="79.666666666666686"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+2,5% aujourd'hui" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFP-Xj-ycJ" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                                                        <rect key="frame" x="5" y="5" width="86" height="40.666666666666664"/>
+                                                                        <rect key="frame" x="5" y="5" width="85.666666666666671" height="40.666666666666664"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="2oQ-ma-zG3">
-                                                                        <rect key="frame" x="31.666666666666664" y="45.666666666666686" width="33.999999999999993" height="34"/>
+                                                                        <rect key="frame" x="31.333333333333336" y="45.666666666666629" width="34.000000000000007" height="34"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="34" id="66Z-Du-luh"/>
                                                                             <constraint firstAttribute="width" secondItem="2oQ-ma-zG3" secondAttribute="height" multiplier="1:1" id="Nkc-YF-bRF"/>
@@ -1230,16 +1225,16 @@ Adresse du smart contract :
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGo-O7-frG" customClass="GreyView" customModule="MiTokens" customModuleProvider="target">
-                                                                <rect key="frame" x="122" y="28.333333333333321" width="96" height="79.666666666666686"/>
+                                                                <rect key="frame" x="121.66666666666669" y="28.333333333333378" width="96.333333333333314" height="79.666666666666686"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-1,07% cette semaine" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdw-Rr-hum" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                                                        <rect key="frame" x="5" y="5" width="86" height="40.666666666666664"/>
+                                                                        <rect key="frame" x="5" y="5" width="86.333333333333329" height="40.666666666666664"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="Ksl-jK-ZEc">
-                                                                        <rect key="frame" x="31.333333333333314" y="45.666666666666686" width="34" height="34"/>
+                                                                        <rect key="frame" x="31.666666666666657" y="45.666666666666629" width="34" height="34"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="34" id="MgF-o0-wRj"/>
                                                                             <constraint firstAttribute="width" secondItem="Ksl-jK-ZEc" secondAttribute="height" multiplier="1:1" id="Nwd-xy-TDt"/>
@@ -1257,16 +1252,16 @@ Adresse du smart contract :
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFN-sk-h2o" customClass="GreyView" customModule="MiTokens" customModuleProvider="target">
-                                                                <rect key="frame" x="230.99999999999997" y="28.333333333333321" width="96.666666666666657" height="79.666666666666686"/>
+                                                                <rect key="frame" x="230.99999999999997" y="28.333333333333378" width="96.666666666666657" height="79.666666666666686"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+3,2% ce mois-ci" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYY-V9-AcA" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                                                        <rect key="frame" x="4.9999999999999716" y="5" width="86" height="40.666666666666664"/>
+                                                                        <rect key="frame" x="5.0000000000000284" y="5" width="86.333333333333329" height="40.666666666666664"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="fQx-g2-D6Q">
-                                                                        <rect key="frame" x="31.666666666666657" y="45.666666666666686" width="34" height="34"/>
+                                                                        <rect key="frame" x="31.666666666666657" y="45.666666666666629" width="34" height="34"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="34" id="DyD-78-UcW"/>
                                                                             <constraint firstAttribute="width" secondItem="fQx-g2-D6Q" secondAttribute="height" multiplier="1:1" id="Fsy-U9-Ys1"/>
@@ -1320,30 +1315,30 @@ Adresse du smart contract :
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buI-9N-Epe">
-                                                <rect key="frame" x="0.0" y="350" width="349.33333333333331" height="1"/>
+                                                <rect key="frame" x="0.0" y="350" width="350" height="1"/>
                                                 <color key="backgroundColor" name="ShadowColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="W36-aE-Jek"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="État de l'airdrop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbC-q2-GuW" customClass="Important_label" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="21.000000000000007" y="364.33333333333337" width="120.66666666666669" height="20.333333333333314"/>
+                                                <rect key="frame" x="21.000000000000007" y="364" width="120.66666666666669" height="20.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oW-6m-Pa4" customClass="MiTokens_button" customModule="MiTokens" customModuleProvider="target">
-                                                <rect key="frame" x="146" y="401.33333333333337" width="57" height="30"/>
+                                                <rect key="frame" x="146.33333333333334" y="400.33333333333326" width="57" height="30"/>
                                                 <state key="normal" title="Modifier"/>
                                                 <connections>
                                                     <action selector="editAirdrop:" destination="stE-in-2YA" eventType="touchUpInside" id="MDp-Nx-Asl"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="CPy-Hd-5hm">
-                                                <rect key="frame" x="21" y="393.33333333333337" width="315" height="0.0"/>
+                                                <rect key="frame" x="21" y="392.33333333333326" width="315.33333333333331" height="0.0"/>
                                                 <subviews>
                                                     <view hidden="YES" opaque="NO" clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXW-yQ-b4d" customClass="GreyView" customModule="MiTokens" customModuleProvider="target">
-                                                        <rect key="frame" x="-43" y="-582.33333333333337" width="0.0" height="34"/>
+                                                        <rect key="frame" x="-42" y="-581.66666666666663" width="0.0" height="34"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ag0-eW-veq" customClass="ColorIndicator_view" customModule="MiTokens" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="8" height="34"/>
@@ -1372,7 +1367,7 @@ Adresse du smart contract :
                                                         </constraints>
                                                     </view>
                                                     <view hidden="YES" opaque="NO" clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBp-2G-j0l" customClass="GreyView" customModule="MiTokens" customModuleProvider="target">
-                                                        <rect key="frame" x="-35" y="-582.33333333333337" width="0.0" height="34"/>
+                                                        <rect key="frame" x="-34" y="-581.66666666666663" width="0.0" height="34"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fNX-Dv-y8f" customClass="ColorIndicator_view" customModule="MiTokens" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="8" height="34"/>
@@ -1404,7 +1399,7 @@ Adresse du smart contract :
                                                         </connections>
                                                     </view>
                                                     <view hidden="YES" opaque="NO" clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qW2-QW-Ohm" customClass="GreyView" customModule="MiTokens" customModuleProvider="target">
-                                                        <rect key="frame" x="-35" y="-582.33333333333337" width="0.0" height="34"/>
+                                                        <rect key="frame" x="-34" y="-581.66666666666663" width="0.0" height="34"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rvA-07-62g" customClass="ColorIndicator_view" customModule="MiTokens" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="8" height="34"/>
@@ -1433,7 +1428,7 @@ Adresse du smart contract :
                                                         </constraints>
                                                     </view>
                                                     <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyV-oJ-SRh" customClass="MiTokens_button" customModule="MiTokens" customModuleProvider="target">
-                                                        <rect key="frame" x="-35" y="-582.33333333333337" width="211" height="34"/>
+                                                        <rect key="frame" x="-34" y="-581.66666666666663" width="211.33333333333334" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="r2R-GQ-6OC"/>
                                                         </constraints>
@@ -1448,7 +1443,7 @@ Adresse du smart contract :
                                                 </constraints>
                                             </stackView>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYf-qk-tOS">
-                                                <rect key="frame" x="8.3333333333333428" y="393.33333333333337" width="340.66666666666663" height="0.0"/>
+                                                <rect key="frame" x="8.6666666666666572" y="392.33333333333326" width="340.66666666666674" height="0.0"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantité de tokens" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3L7-Y2-WmK" customClass="MiTokens_TextField" customModule="MiTokens" customModuleProvider="target">
                                                         <rect key="frame" x="13" y="-43" width="150.66666666666666" height="30"/>
@@ -1456,8 +1451,8 @@ Adresse du smart contract :
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantité referral (optionnel)" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZeF-wx-G8g" customClass="MiTokens_TextField" customModule="MiTokens" customModuleProvider="target">
-                                                        <rect key="frame" x="177" y="-43" width="150.66666666666663" height="30"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantité referral (optionnel)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZeF-wx-G8g" customClass="MiTokens_TextField" customModule="MiTokens" customModuleProvider="target">
+                                                        <rect key="frame" x="176.66666666666669" y="-43" width="151" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -1485,7 +1480,7 @@ Adresse du smart contract :
                                                 </constraints>
                                             </view>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gcx-OD-Ovc">
-                                                <rect key="frame" x="8.3333333333333428" y="351.33333333333337" width="340.66666666666663" height="0.0"/>
+                                                <rect key="frame" x="8.6666666666666572" y="351" width="340.66666666666674" height="0.0"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Modifier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xz3-2p-f7z" customClass="Subtitle_label" customModule="MiTokens" customModuleProvider="target">
                                                         <rect key="frame" x="13" y="13" width="63" height="21"/>
@@ -1515,7 +1510,7 @@ Adresse du smart contract :
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oc7-xh-gE0">
-                                                <rect key="frame" x="21" y="393.33333333333337" width="315" height="0.0"/>
+                                                <rect key="frame" x="21" y="392.33333333333326" width="315.33333333333331" height="0.0"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" id="4A7-57-6BW"/>
                                                 </constraints>
@@ -1655,7 +1650,7 @@ Adresse du smart contract :
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfh-h3-0Pt" customClass="WhiteView" customModule="MiTokens" customModuleProvider="target">
-                                <rect key="frame" x="13" y="263.33333333333331" width="349" height="176"/>
+                                <rect key="frame" x="13" y="263" width="349" height="176"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vz9-xx-iJ5" customClass="ColorIndicator_view" customModule="MiTokens" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="8" height="176"/>
@@ -1671,19 +1666,19 @@ Adresse du smart contract :
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="J'ai vendu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ma-Zt-Gwp" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="49.333333333333371" width="77" height="21"/>
+                                        <rect key="frame" x="16" y="49.666666666666686" width="77" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="tokens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-92-qeH" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                        <rect key="frame" x="203" y="49.333333333333371" width="133" height="21"/>
+                                        <rect key="frame" x="203" y="49.666666666666686" width="133" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pour une valeur de " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eui-KD-mgp" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="92.333333333333371" width="148" height="21"/>
+                                        <rect key="frame" x="16" y="92.666666666666686" width="148" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1698,7 +1693,7 @@ Adresse du smart contract :
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTH-xI-TDL" customClass="Body_label" customModule="MiTokens" customModuleProvider="target">
-                                        <rect key="frame" x="274" y="92.333333333333371" width="62" height="21"/>
+                                        <rect key="frame" x="274" y="92.666666666666686" width="62" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1777,7 +1772,7 @@ Adresse du smart contract :
         <!--Profil-->
         <scene sceneID="kbV-Oh-r6D">
             <objects>
-                <viewController id="5W8-on-71q" customClass="Profil_ViewController" customModule="MiTokens" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="5W8-on-71q" customClass="Profil_ViewController" customModule="MiTokens" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vWI-Sk-4Zx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1904,7 +1899,7 @@ Valeur totale estimée : 217€</string>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0X7-61-WyY">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Profil" id="hOh-nO-K5v" customClass="MiTokens_UINavigationItem" customModule="MiTokens" customModuleProvider="target"/>
+                                    <navigationItem title="MiTokens" id="hOh-nO-K5v" customClass="MiTokens_UINavigationItem" customModule="MiTokens" customModuleProvider="target"/>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="54c-yQ-dbv">
@@ -1930,9 +1925,7 @@ Valeur totale estimée : 217€</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2dr-Mj-WhH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profil" image="User_icon" selectedImage="Arrow Up" id="Fof-T0-Kse">
-                        <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Profil" image="User_icon" selectedImage="User Icon Focus" id="Fof-T0-Kse"/>
                     <navigationItem key="navigationItem" title="Profil" id="2K0-yt-uHt" customClass="MiTokens_UINavigationItem" customModule="MiTokens" customModuleProvider="target"/>
                     <connections>
                         <outlet property="ui_statLabel" destination="49x-DI-YTE" id="BfV-WH-7Yr"/>
@@ -1956,12 +1949,14 @@ Valeur totale estimée : 217€</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Airdrops" width="50" height="50"/>
+        <image name="Airdrops" width="25" height="25"/>
+        <image name="Airdrops Focus" width="25" height="25"/>
         <image name="Arrow Down" width="50" height="50"/>
-        <image name="Arrow Up" width="50" height="50"/>
         <image name="Close_icon" width="50" height="50"/>
-        <image name="User_icon" width="50" height="50"/>
-        <image name="Wallets" width="50" height="50"/>
+        <image name="User Icon Focus" width="25" height="25"/>
+        <image name="User_icon" width="25" height="25"/>
+        <image name="Wallets" width="25" height="25"/>
+        <image name="Wallets Focus" width="25" height="25"/>
         <namedColor name="Blue">
             <color red="0.13725490196078433" green="0.60784313725490191" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

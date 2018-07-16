@@ -141,27 +141,28 @@ class Airdrop_ViewController: TopBarAd_ViewController, UITextFieldDelegate {
                 var diff1h = "\(value.diff1h?.asAmount(withMaxDigits: 1) ?? "") %"
                 if diff1h == " %" {
                     diff1h = "inconnu"
+                    self.ui_thisHourArrow.image = #imageLiteral(resourceName: "Middle")
                 } else if !diff1h.contains("-") {
                     self.ui_thisHourArrow.image = UIImage(named: "Arrow Up")
-                    diff1h = "+\(diff1h) %"
+                    diff1h = "+\(diff1h)"
                 }
                 // Changement sur 1 jour
-//                var diff1d = value.diff1d?.asAmount(withMaxDigits: 1)
                 var diff1d = "\(value.diff1d?.asAmount(withMaxDigits: 1) ?? "") %"
                 if diff1d == " %" {
                     diff1d = "inconnu"
+                    self.ui_todayArrow.image = #imageLiteral(resourceName: "Middle")
                 } else if !diff1d.contains("-") {
                     self.ui_todayArrow.image = UIImage(named: "Arrow Up")
-                    diff1d = "+\(diff1d) %"
+                    diff1d = "+\(diff1d)"
                 }
                 // Changement sur 1 semaine
-//                var diff1w = value.diff1w?.asAmount(withMaxDigits: 1)
                 var diff1w = "\(value.diff1w?.asAmount(withMaxDigits: 1) ?? "") %"
                 if diff1w == " %" {
                   diff1w = "inconnu"
+                    self.ui_weekArrow.image = #imageLiteral(resourceName: "Middle")
                 } else if !diff1w.contains("-") {
                     self.ui_weekArrow.image = UIImage(named: "Arrow Up")
-                    diff1w = "+\(diff1w) %"
+                    diff1w = "+\(diff1w)"
                 }
                 
                 // Affichage des valeurs
