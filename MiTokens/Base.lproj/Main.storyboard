@@ -327,7 +327,7 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                                 <rect key="frame" x="55" y="686" width="265" height="30"/>
                                 <state key="normal" title="Ajouter un Airdrop"/>
                                 <connections>
-                                    <segue destination="yfo-iU-WmC" kind="presentation" modalPresentationStyle="overCurrentContext" id="WJq-5h-5lL"/>
+                                    <segue destination="yfo-iU-WmC" kind="presentation" identifier="goToNewAirdrop" modalPresentationStyle="overCurrentContext" id="WJq-5h-5lL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -389,6 +389,7 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                         <outlet property="ui_soldRadio" destination="jMe-65-QzQ" id="Q4I-cN-klK"/>
                         <outlet property="ui_waitingRadio" destination="QtS-7a-KAx" id="r25-p4-eJd"/>
                         <segue destination="stE-in-2YA" kind="presentation" identifier="showFocusedAirdrop" modalPresentationStyle="overCurrentContext" id="ODs-4u-rsY"/>
+                        <segue destination="LYg-t9-wC5" kind="show" identifier="goToWallets" id="eQ0-5l-3Hh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -413,7 +414,7 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-842" y="-631"/>
+            <point key="canvasLocation" x="-758" y="-596"/>
         </scene>
         <!--Mes wallets-->
         <scene sceneID="ZQJ-1Q-IBH">
@@ -1101,7 +1102,7 @@ Désormais, lorsque vous réaliserez un airdrop, venez l’ajouter sur MiTokens 
                 <exit id="NNq-IV-Znd" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="UQe-cw-SLO">
                     <connections>
-                        <segue destination="NNq-IV-Znd" kind="unwind" identifier="goBackHome" unwindAction="unwindToHomeWithSegue:" id="iKM-WX-d0b"/>
+                        <segue destination="NNq-IV-Znd" kind="unwind" identifier="goBackHome" customClass="UIStoryboardSegueWithCompletion" customModule="MiTokens" customModuleProvider="target" unwindAction="unwindToHomeWithSegue:" id="iKM-WX-d0b"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1338,7 +1339,7 @@ Adresse du smart contract :
                                                 <rect key="frame" x="21" y="392.33333333333326" width="315.33333333333331" height="0.0"/>
                                                 <subviews>
                                                     <view hidden="YES" opaque="NO" clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXW-yQ-b4d" customClass="GreyView" customModule="MiTokens" customModuleProvider="target">
-                                                        <rect key="frame" x="-42" y="-581.66666666666663" width="0.0" height="34"/>
+                                                        <rect key="frame" x="-34" y="-581.66666666666663" width="0.0" height="34"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ag0-eW-veq" customClass="ColorIndicator_view" customModule="MiTokens" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="8" height="34"/>
@@ -1974,6 +1975,7 @@ Valeur totale estimée : 217€</string>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fHT-u0-qBe"/>
+        <segue reference="ODs-4u-rsY"/>
+        <segue reference="TSw-Vc-Jg1"/>
     </inferredMetricsTieBreakers>
 </document>

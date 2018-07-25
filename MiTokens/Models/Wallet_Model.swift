@@ -16,6 +16,7 @@ class Wallet:Object {
     @objc private dynamic var _erc20Address:String?
     private var _tokensList:[token] = []
     lazy var notifManager = NotificationManager()
+    @objc open override class func ignoredProperties() -> [String] { return ["notifManager"] }
     var lastUpdate:Date?
     
     var name: String {

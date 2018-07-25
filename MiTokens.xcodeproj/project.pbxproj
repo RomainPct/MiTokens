@@ -20,7 +20,7 @@
 		DE38772020D5692000054BF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE38771F20D5692000054BF8 /* GoogleService-Info.plist */; };
 		DE4485D220BDD48400DB5819 /* CreateALink_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4485D120BDD48400DB5819 /* CreateALink_ViewController.swift */; };
 		DE5109E720C81E2100140312 /* NewSale_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5109E620C81E2000140312 /* NewSale_ViewController.swift */; };
-		DE52C69920D4F7ED0051B582 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE52C69820D4F7ED0051B582 /* NotificationsManager.swift */; };
+		DE52C69920D4F7ED0051B582 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE52C69820D4F7ED0051B582 /* NotificationManager.swift */; };
 		DE5BF57A209DA93200EA5BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BF579209DA93200EA5BF6 /* AppDelegate.swift */; };
 		DE5BF57C209DA93200EA5BF6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BF57B209DA93200EA5BF6 /* HomeViewController.swift */; };
 		DE5BF57F209DA93200EA5BF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5BF57D209DA93200EA5BF6 /* Main.storyboard */; };
@@ -81,7 +81,7 @@
 		DE38771F20D5692000054BF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE4485D120BDD48400DB5819 /* CreateALink_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateALink_ViewController.swift; sourceTree = "<group>"; };
 		DE5109E620C81E2000140312 /* NewSale_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSale_ViewController.swift; sourceTree = "<group>"; };
-		DE52C69820D4F7ED0051B582 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		DE52C69820D4F7ED0051B582 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		DE5BF576209DA93200EA5BF6 /* MiTokens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiTokens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5BF579209DA93200EA5BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE5BF57B209DA93200EA5BF6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -273,7 +273,7 @@
 				DE82503A209F7A6A00084A23 /* Singletons_Model.swift */,
 				DE825034209F3F8C00084A23 /* APIManager_Model.swift */,
 				DE30AE8220CBD34700B9AA5A /* AdManager_Model.swift */,
-				DE52C69820D4F7ED0051B582 /* NotificationsManager.swift */,
+				DE52C69820D4F7ED0051B582 /* NotificationManager.swift */,
 				DE82503C209F809600084A23 /* WalletsDatabase_Model.swift */,
 				DE825038209F58F500084A23 /* AirdropsDatabase_Model.swift */,
 				DE00CFF620BEEA40001F6C92 /* LinksDatabase_Model.swift */,
@@ -340,6 +340,7 @@
 				DE5BF573209DA93200EA5BF6 /* Frameworks */,
 				DE5BF574209DA93200EA5BF6 /* Resources */,
 				1AAAFF4BACB0FDC4A2977D9C /* [CP] Embed Pods Frameworks */,
+				DE24FCAB21047C3200FD3335 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -417,6 +418,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MiTokens/Pods-MiTokens-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -429,6 +431,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -460,6 +463,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DE24FCAB21047C3200FD3335 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" b1611e965dfe2b297b8cd0375be82e3d3a5d4bf3 1b1991ab1cdf7db691b98df7cef2b7af685e5fbc2a4d314985986281b1ac6b37";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -493,7 +510,7 @@
 				DEDD1D0C20B5FE8F0039FDD2 /* Double_extension.swift in Sources */,
 				DE825025209EF2CE00084A23 /* MiTokens_TextField.swift in Sources */,
 				DED80D0F209E55CD001A0A90 /* Airdrop_CollectionViewCell.swift in Sources */,
-				DE52C69920D4F7ED0051B582 /* NotificationsManager.swift in Sources */,
+				DE52C69920D4F7ED0051B582 /* NotificationManager.swift in Sources */,
 				DEE4B16E20B73FE10005705F /* Structures.swift in Sources */,
 				DE825028209EF31800084A23 /* MiTokens_button.swift in Sources */,
 				DE08FA1E20B359B7008E1C01 /* NavBar_button.swift in Sources */,
@@ -576,7 +593,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;

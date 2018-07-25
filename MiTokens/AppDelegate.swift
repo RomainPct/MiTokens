@@ -9,7 +9,10 @@
 import UIKit
 import GoogleMobileAds
 import Firebase
+import FirebaseAuth
 import UserNotifications
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,8 +30,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Initialize the Google Mobile Ads SDK.
         GADMobileAds.configure(withApplicationID: "ca-app-pub-6024155085751040~8083296975")
         
+        // Init Crashlytics
+        Fabric.with([Crashlytics.self])
+        
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
+        Auth.auth().signInAnonymously { (result, error) in
+            if let errorMsg = error?.localizedDescription {
+                print(errorMsg)
+            }
+        }
         // Push
         UNUserNotificationCenter.current().getNotificationSettings { (settings) in
             if settings.authorizationStatus == .authorized {
@@ -48,6 +59,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print(error)
+    }
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        if shortcutItem.type == "fr.romainpenchenat.MiTokens.NewAirdrop" {
+            let tabBar = self.window!.rootViewController as! UITabBarController
+            tabBar.dismiss(animated: false, completion: nil)
+            tabBar.selectedIndex = 0
+            NotificationCenter.default.post(name: NSNotification.Name.ShortcutNewAirdrop, object: nil)
+        }
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

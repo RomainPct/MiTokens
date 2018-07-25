@@ -11,7 +11,8 @@ import GoogleMobileAds
 
 class NewAirdrop_ViewController: TopBarAd_ViewController, UITextFieldDelegate {
 
-    var wasEdited:Bool = false
+//    var wasEdited:Bool = false
+    var newAirdrop:Airdrop?
     
     @IBOutlet weak var ui_nameInput: MiTokens_TextField!
     @IBOutlet weak var ui_symbolInput: MiTokens_TextField!
@@ -27,6 +28,8 @@ class NewAirdrop_ViewController: TopBarAd_ViewController, UITextFieldDelegate {
         ui_symbolInput.delegate = self
         ui_amountInput.delegate = self
         ui_referralAmountInput.delegate = self
+        
+        ui_nameInput.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,9 +54,8 @@ class NewAirdrop_ViewController: TopBarAd_ViewController, UITextFieldDelegate {
             let symbol = verifInput(input: ui_symbolInput, isAnAmount: false),
             let amount = verifInput(input: ui_amountInput, isAnAmount: true),
             let referral = verifInput(input: ui_referralAmountInput, isAnAmount: true) {
-            let newAirdrop = Airdrop(name: name, symbol: symbol, amount: amount, referral: referral)
-            Singletons.AirdropsDB.addAirdrop(airdrop: newAirdrop)
-            wasEdited = true
+            newAirdrop = Airdrop(name: name, symbol: symbol, amount: amount, referral: referral)
+            Singletons.AirdropsDB.addAirdrop(airdrop: newAirdrop!)
             performSegue(withIdentifier: "goBackHome", sender: nil)
         }
     }
@@ -76,8 +78,10 @@ class NewAirdrop_ViewController: TopBarAd_ViewController, UITextFieldDelegate {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if wasEdited,
+        if let newAirdrop = newAirdrop,
             let nextVC = segue.destination as? HomeViewController {
+            print("special reload action")
+            nextVC.targetAirdropRedirection = newAirdrop
             nextVC._needReload = true
             nextVC.ui_collectionView.reloadData()
         }

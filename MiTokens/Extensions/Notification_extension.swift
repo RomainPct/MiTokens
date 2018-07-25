@@ -12,5 +12,6 @@ extension Notification.Name {
     
     static let ETHPriceIsUpdate = Notification.Name("ETHPriceIsUpdate")
     static let NotificationTokenReceived = Notification.Name(rawValue: "NotificationTokenRecieved")
+    static let ShortcutNewAirdrop = Notification.Name(rawValue: "ShortcutNewAirdrop")
     
 }

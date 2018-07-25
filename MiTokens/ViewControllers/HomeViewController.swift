@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import Crashlytics
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate, UISearchBarDelegate {
 
@@ -52,8 +53,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         [ui_waitingRadio,ui_receivedRadio,ui_soldRadio].forEach { (button) in
             button?.isSelected = true
         }
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.ShortcutNewAirdrop, object: nil, queue: nil) { (_) in
+            self.performSegue(withIdentifier: "goToNewAirdrop", sender: nil)
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -159,9 +164,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         if let segue = segue as? UIStoryboardSegueWithCompletion {
             segue.completion = {
                 if segue.identifier == "goBackHome" {
-                    self.performSegue(withIdentifier: "showFocusedAirdrop", sender: nil)
+                    if self.targetAirdropRedirection != nil {
+                        self.ui_collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: UICollectionViewScrollPosition.top, animated: true)
+                        self.performSegue(withIdentifier: "showFocusedAirdrop", sender: nil)
+                    }
                 } else {
-                    self.performSegue(withIdentifier: "goToWallets", sender: nil)
+                    self.tabBarController?.selectedIndex = 1
                 }
             }
         }
@@ -179,7 +187,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 targetAirdropRedirection = nil
                 nextVC.airdrop = target
             } else {
+                // Vérifier avant de lancer le segue si l'airdrop selected n'est pas vide
                 nextVC.airdrop = _AirdropsList[airdropSelected!]
+                airdropSelected = nil
             }
         }
      }

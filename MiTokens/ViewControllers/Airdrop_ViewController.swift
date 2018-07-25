@@ -168,15 +168,15 @@ class Airdrop_ViewController: TopBarAd_ViewController, UITextFieldDelegate {
                 // Affichage des valeurs
                 self.ui_thisHourLabel.text = """
                 \(diff1h)
-                cette heure-ci
+                en 1 heure
                 """
                 self.ui_dayLabel.text = """
                 \(diff1d)
-                aujourd'hui
+                en 24 heures
                 """
                 self.ui_weekLabel.text = """
                 \(diff1w)
-                cette semaine
+                en 7 jours
                 """
                 
             } else {

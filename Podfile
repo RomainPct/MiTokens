@@ -6,13 +6,18 @@ target 'MiTokens' do
   use_frameworks!
 
   # Pods for MiTokens
-  pod 'RealmSwift', '~> 2.10.0'
-  pod 'Alamofire', '~> 4.5'
-  pod 'SwiftyJSON', '~> 4.0'
-  pod 'SwiftyLevenshtein', '~> 0.0.1'
+  pod 'RealmSwift' # Realm Database
+  pod 'Alamofire' # Requete http
+  pod 'SwiftyJSON', '~> 4.0' # Lire le json
+  pod 'SwiftyLevenshtein', '~> 0.0.1' # Classement Levenshtein
   pod 'Google-Mobile-Ads-SDK'
-  pod 'KeychainAccess'
+  pod 'KeychainAccess' # Utiliser keychain facilement
+  # Firebase
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  # Crashlytics
+  pod 'Fabric', '~> 1.7.9'
+  pod 'Crashlytics', '~> 3.10.5'
 
 end
